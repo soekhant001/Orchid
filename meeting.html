@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meeting</title>
+	
+	<link rel="stylesheet" type="text/css" href="./libs/fontawesomepro/css/all.min.css">
+   <style type="text/css">
+      @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Padauk:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif,'Padauk', sans-serif;
+}
+
+.container {
+    margin: auto;
+    padding: 20px;
+    background-color:#f2ecda;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .first{
+   width: 100%;
+  }
+  .container img{
+   width: 100%;
+   height: auto;
+  }
+  .location{
+    color: red;
+   font-size: 25px;
+   margin: 10px;
+  }
+.description i{
+   float: left;
+   margin-right: 10px;
+}
+.description h3{
+   font-weight: bold;
+}
+.description h1{
+   color: red;
+   padding-bottom: 10px;
+}
+.description form .button1{
+   padding: 10px 30px;
+   margin-top: 10px;
+   margin-left: 43%;
+   color: white;
+   background-color: red;
+   border: none;
+   transition: 1s;
+   margin-bottom: 10px;
+}
+.description form .button1:hover{
+  background-color: #cc655e;
+  color: black;
+  font-weight: bold;
+}
+.venue {
+   color: white;
+   text-align: center;
+padding: 10px 20px;
+background-image: url("./img/meetings-banner.jpg");
+}
+.venue .opacity{
+   background-image:linear-gradient(115deg,
+               rgba(64, 48, 59, 0.38),
+               rgba(107, 93, 102, 0.50)) ;
+   
+}
+.venue h2{
+   margin: 5px;
+   padding: 10px;
+}
+.venue p{
+   font-size: 18px;
+}
+.venue .button2{
+   font-weight: bold;
+  font-size: 15px;
+   border: none;
+   background-color: red;
+   color: white;
+   font-weight: border;
+   padding: 10px 15px;
+   margin: 10px 10px;
+   width: 200px;
+}
+.venue .button2:hover{
+   background-color:gray;
+   color: black;
+}
+.h2{
+   padding: 10px;
+}
+.sheet1,.sheet2{
+   background-color: #f4f4f4;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   border: 5px solid #f4f4f4;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    margin-right: 20px;
+}
+.sheets{
+   display: flex;
+}
+.reviews h3{
+   padding: 10px 0;
+}
+.card1,.card2,.card3,.card4{
+    padding: 10px ;
+    margin: 20px;
+   background-color: #f4f4f4;
+   width: 350px;
+   height: 225px;
+   border: 5px solid #f4f4f4;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+}
+.cards{
+   display: flex;
+}
+.cards h4{
+   padding: 10px 0;
+}
+.cards .date,.sign{
+   text-align: right;
+   font-style: italic;
+}
+.cards .review{
+   padding-top: 10px;
+
+}
+.cards .sign{
+   font-weight: bolder;
+   margin-bottom:100px;
+}
+.catering img{
+   width: 300px;
+   height: 200px;
+   float: left;
+   padding: 10px;
+}
+.catering p{
+   padding: 10px;
+   margin: 10px;
+}
+.catering br{
+   clear: left;
+}
+.container .why{
+   margin: 0 auto;
+   justify-content: center;
+   width: 80%; 
+}
+.why i{
+   color: red;
+   font-size: 40px;  
+   align-items: center;
+   padding: 10px 50px;
+   background-color: lightgray;
+   float: left;
+   margin: 10px ;
+}
+.why h3{
+   padding: 10px;
+}
+.why br{
+   clear: left;
+}
+.package{
+   display: flex;
+}
+.package1,.package2,.package3{
+   width: 400px;
+   height:auto;
+   background-color: #f4f4f4;
+   border: 5px solid #f4f4f4;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+   padding: 10px;
+   margin-top: 10px;
+   margin-left: 60px;
+}
+.package i{
+   float: left;
+   margin:0 10px;
+   color: red;
+   padding: 10px 0;
+}
+.package h4{
+   color: red;
+      padding: 10px 0;
+      margin:0 10px;
+}
+.package h2{
+   padding: 10px 0;
+   margin:0 10px;
+}
+.package img{
+   padding: 10px;
+   height: auto;
+}
+.package-button1{
+   font-weight: bold;
+  font-size: 15px;
+   border: none;
+   background-color: red;
+   color: white;
+   font-weight: border;
+   padding: 15px 15px;
+   margin: 10px 30px;
+   width: 300px;
+}
+
+.package-button1:hover{
+
+   background-color:gray;
+   color: black;
+}
+.package .package3 img{
+   width: 100%;
+   height: 300px;
+}
+
+/*.package1 .package-foot i{
+   color: black;
+   margin-left:10px;
+   
+}
+.package1 .package-foot{
+   text-align: center;
+   padding: 10px;
+}*/
+
+
+
+   </style>
+</head>
+<body>
+   <div class="container">
+   	<div class="first">
+   	  <div class="img1">
+   	  	<img src="./img/meeting1.jpg" alt="meeting1.jpg">
+   	  </div>
+   	  <div class="description">
+   	  	<div class="location">
+   	  	<i class="fa-solid fa-location-dot"></i>
+   	  	<h3>Orchid</h3>
+   	  </div>
+   	  	<h1>Exceptionl Meeting Experiences</h1>
+   	  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   	  	<form>
+   	  		<input type="button" name="button1" class="button1"id="button1" value="ENQUIRE NOW">
+   	  	</form>
+   	  </div>
+   	<!-- <div class="img2">
+   		<img src="./img/meetings-banner.jpg" alt="meetings-banner.jpg">
+   	</div> --> 
+   	
+   	<div class="venue">
+   		<div class="opacity">
+   		<h2>Find a Suitable Venue</h2>
+   		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   		<form>
+   			<input type="button" name="button2" id="button2" class="button2" value="VIEW ALL VENUES">
+   		</form>
+   	</div>
+     	  </div>
+
+     	  <h2 class="h2">Additional Information</h2>
+     	  <div class="sheets">
+     	  	<div class="sheet1">
+     	  		<p>Fact Sheet</p>
+     	  		<i class="fa-solid fa-download"></i>
+   			<a href="#">Download PDF</a>
+     	  	</div>
+
+     	  	<div class="sheet2">
+     	  		<p>Fact Sheet</p>
+     	  		<i class="fa-solid fa-download"></i>
+   			<a href="#">Download PDF</a>
+     	  	</div>
+     	  </div>
+
+     	  <div class="reviews">
+     	  	<h3>Guest Reviews</h3>
+     	  	<div class="cards">
+     	  		
+     	  	<div class="card1">
+     	  		<h4>Quite good</h4>
+     	  		<p class="date">March 2019</p>
+     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+     	  		<p class="sign">John I</p>
+     	  	</div>
+			
+     	  	<div class="card2">
+     	  		<h4>Quite good</h4>
+     	  		<p class="date">March 2019</p>
+     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+     	  		<p class="sign">John A</p>
+     	  	</div>
+
+     	  	<div class="card3">
+     	  		<h4>Quite good</h4>
+     	  		<p class="date">March 2019</p>
+     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+     	  		<p class="sign">John B</p>
+     	  	</div>
+
+     	  	<div class="card4">
+     	  		<h4>Quite good</h4>
+     	  		<p class="date">March 2019</p>
+     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+     	  		<p class="sign">John C</p>
+     	  	</div>
+     	  </div>
+     	</div>
+
+     	<div class="catering">
+     		<h2>Catering</h2>
+     		<img src="./img/catering.jpg" alt="catering.jpg">
+     		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+     		<br>
+     	</div>
+   </div>
+      <div class="why">
+      	<h2>Why Orchid Hotel</h2>
+      	
+      	<i class="fa-solid fa-user"></i>
+      		<h3>Superior Product Knowledge</h3>
+      		<p>Get the help you need to plan for an upcoming event. Our friendly PARKROYAL people are trained to handle every detail – from being responsive to your specific needs to offering flexibility in negotiations.</p>
+      	<br>
+
+
+         
+      	<i class="fa-solid fa-magnifying-glass"></i>
+      		<h3>Guided site visits</h3>
+      		<p>When you drop by for a site visit, a senior staff member will accompany you throughout your tour of our venues.</p>
+      
+         <br>
+
+
+      	<i class="fa-sharp fa-solid fa-handshake"></i>
+      		<h3>Complete event management</h3>
+      		<p>A dedicated Conference Service Manager will see to all your event requirements from start to finish. Need technical support? Our AV expert is on hand to provide assistance.</p>
+      	<br>
+
+      	<i class="fa-regular fa-calendar-days"></i>
+      		<h3>Elevating your event</h3>
+      		<p>Our PARKROYAL people are committed to understanding your event needs and responding quickly to any unforeseen issues. When it comes to food and beverage, our experienced culinary team will serve up refreshments and meals incorporating local flavours..</p>
+      
+         <br>
+
+            <i class="fa-sharp fa-solid fa-credit-card"></i>
+      		<h3>Personalised payments</h3>
+      		<p>We’re able to accommodate customised billing procedures. Simply notify us in advance so we can guarantee the delivery of your final bill within five business days, upon completion of your event..</p>
+      
+         <br>
+
+
+      </div>
+       <h2>Meetings and Events Packages</h2>
+      <div class="package">
+      	
+      	<div class="package1">
+      	<i class="fa-solid fas fa-bed-empty"></i>
+      	<h4>ROOMS AND SUITES</h4>
+      	<h2>Exclusively Yours</h2>
+      	<p>Up to 30% savings on stays and special breakfast offers</p>
+      	<img src="./img/package-img1.jpg" alt="package-img1.jpg">
+      	<form>
+      		<input type="button" name="package-button1" id="package-button1" class="package-button1" value="MORE DETAILS">
+      	</form>
+      	
+
+      	<!-- <div class="package-foot">
+      	<i class="fa-sharp fa-solid fa-map-location-dot"></i>
+      	<p>Selected Properties</p>
+      	</div> -->
+      </div>
+
+      <div class="package2">
+      <i class="fa-solid fa-utensils"></i>
+      	<h4> DINING</h4>
+      	<h2>Sunday Brunch Buffet</h2>
+      	<p>Spend quality time with your friends and family at our delightful Brunch Buffet! Available every Sunday from</p>
+      	<img src="./img/Sunday Brunch Buffet.jpg" alt="Sunday Brunch Buffet.jpg">
+      	<form>
+      		<input type="button" name="package-button1" id="package-button1" class="package-button1" value="MORE DETAILS">
+      	</form>
+      	
+
+      	<!-- <div class="package-foot">
+      	<i class="fa-sharp fa-solid fa-map-location-dot"></i>
+      	<p>Selected Properties</p>
+      	</div> -->
+      </div>
+
+      <div class="package3">
+     <i class="fa-solid fa-utensils"></i>
+      	<h4> DINING</h4>
+      	<h2>Dim Sum Lunch Buffet</h2>
+      	<p>Experience the signature authentic taste of Asia in our Dim Sum Lunch Buffet at Sichuan Dou</p>
+      	<img src="./img/Dim Sum Lunch Buffet.jpg" alt="Dim Sum Lunch Buffet.jpg">
+      	<form>
+      		<input type="button" name="package-button1" id="package-button1" class="package-button1" value="MORE DETAILS">
+      	</form>
+      	
+
+      	<!-- <div class="package-foot">
+      	<i class="fa-sharp fa-solid fa-map-location-dot"></i>
+      	<p>Selected Properties</p>
+      	</div> -->
+      </div>
+
+      </div>
+
+   </div>
+</body>
+</html>

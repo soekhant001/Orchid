@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+      .c-item{
+        height: 700px;
+       }
+
+      .c-container{
+      position: relative;
+      top: 123px;
+       }
+
+      .schedule-container{
+          position: relative;
+          bottom: -50px;
+          z-index: 100;
+          margin: 20px auto;
+          width: 70%;
+          height: 120px;
+          background-color: rgba(210, 199, 250, 1);
+          display: flex;
+          justify-content: space-evenly;
+          gap: 10px;
+          border-radius: 8px;
+      }
+
+      .check{
+          
+          width: 150px;
+          height: 100px;
+          padding-top: 15px;
+         
+      }
+
+      .check-in{
+         
+          height: 100%;
+
+      }
+
+      .check-out{
+         
+          height: 100%;
+
+      }
+
+      .adult{
+        
+          height: 100%;
+
+      }
+
+      .child{
+       
+          height: 100%;
+
+      }
+
+      .room{
+         
+          height: 100%;
+
+      }
+
+      .check-input{
+          background-color: rgba(210, 199, 250, 1);
+          width: 100%;
+          margin-top: 15px;
+          border: none;
+          border-bottom: 1px solid black;
+          outline: none;
+          width: 120px;
+      }
+
+      /* Welcome */
+
+      .wel-container{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            gap: 50px;
+            
+
+        }
+        .welcome{
+            font-size: 100px;
+            opacity: 0.1;
+            text-shadow: 10px 10px 10px black;
+
+        }
+
+        .hotel-name{
+            font-size: 60px;
+            position: relative;
+            top: -90px;
+        }
+
+
+        .left{
+            width: 500px;
+
+        }
+        .w-p{
+            margin-top: -70px;
+        }
+ 
+
+        .btn-about{
+            width: 100px;
+            height: 40px;
+            margin-top: px;
+            border: 2px solid rgba(210, 199, 250, 0.782);
+            background-color: rgba(210, 199, 250, 0.782);
+            border-radius: 6px;
+        }
+
+        .right img{
+            width: 500px;
+        }
+
+        /* facility start */
+       .facility{
+            background-color: #f8f8f8;
+            width: 70%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: start;
+            gap: 50px 80px;
+            padding: 50px ;
+            margin: 30px auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        
+    }
+    .facility img {
+
+        width: 100px;
+        height: 90px;  
+    }
+    
+    .food-drink{
+  
+        width: 250px;
+        height: 150px;
+
+    }
+
+    .outdoor-dining{
+      
+        width: 250px;
+        height: 150px;
+
+    }
+
+    .playground{
+      
+        width: 250px;
+        height: 150px;
+    }
+
+    .park{
+     
+        width: 250px;
+        height: 150px;
+        margin-top: 60px;
+
+    }
+
+    .gym{
+     
+        width: 250px;
+        height: 150px;
+        margin-top: 60px;
+
+    }
+
+    .swimming-pool{     
+        width: 250px;
+        height: 150px;
+        margin-top: 60px;
+    }
+        /* facility end */
+
+        /* message & accordion start */
+
+        .message-accordion{
+
+          margin: 0 auto;
+          width: 70%;
+          height: 500px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+        }
+        .message-accordion .left-message input{
+          display: inline-block;
+          width: 90%;
+          margin: 10px 15px;
+          padding-left: 5px;
+          height: 40px;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid black;
+          background-color: #f8f8f8;
+          
+        }
+
+        .send-message{
+          border: 2px solid rgba(210, 199, 250, 0.782);
+          background-color: rgba(210, 199, 250, 0.782);
+          text-align: center;
+          width: 90%;
+          height: 40px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          margin: 10px 15px;
+          border-radius: 6px;
+         
+        }
+
+        .message-area{
+          margin-left: 14px;
+          margin-bottom: 10px;
+          width: 90%;
+          height: 70px;
+          padding-top: 40px;
+          padding-left: 5px;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid black;
+          background-color: #f8f8f8;
+
+        }
+
+        .left-message{
+          margin-top: 20px;
+          padding: 30px;
+          width: 45%;
+          height: 450px;
+          background-color: #f8f8f8;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+        }
+
+        .right-accordion{
+          margin-top: 20px;
+          padding: 30px;
+          width: 45%;
+          height: 450px;
+          background-color: #f8f8f8;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          
+
+        }
+
+
+        /* message & accordion end */
+
+  </style>
+  </head>
+  <body>
+
+    <!-- heading start -->
+    
+      <header>
+        <div class="logo">
+          <img src="./images/logo1.png" alt="hotelLogo" />
+        </div>
+  
+        <nav class="nav-bar">
+              <ul class="nav-list">
+                <li>
+                  <div class="sign">
+                    <a href="">
+                        <i class="fa-solid fa-user"></i>
+                        Sign In/Up and Save 10% </a>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="bookNow">
+                      <a href="">Book Now</a>
+                  </div>
+                </li>
+              </ul>
+              
+        </nav>  
+    </header>
+   
+<div class="nav-list-container">
+  <ul class="navList">     
+    <div class="room"><li><a href="">Room</a></li></div>
+    <div class="event"><li><a href="">Event</a></li></div>
+    <div class="restaurants"><li><a href="">Restaurants</a></li></div>
+    <div class="s-f"><li><a href="">Services & Facilities</a></li></div>
+    <div class="blog"><li><a href="">Blog</a></li></div>
+    <div class="contact"><li><a href="">Contact</a></li></div>
+</ul>
+</div>
+<div id="carouselExampleFade" class="carousel slide carousel-fade c-container">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/pool.webp" class="d-block w-100 c-item" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/room1.jpg" class="d-block w-100 c-item" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/room2.jpg" class="d-block w-100 c-item" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- heading end -->
+
+<!-- schedule start -->
+<div class="schedule-container">
+  <div class="check  check-in">
+      <h6>Check In</h6>
+      <input class="check-input" type="date">
+  </div>
+  <div class="check  check-out">
+      <h6>Check Out</h6>
+      <input class="check-input" type="date">
+  </div>
+  <div class="check  adult">
+      <h6>Adult</h6>
+      <input class="check-input" type="text">
+  </div>
+  <div class="check  child">
+      <h6>Childs</h6>
+      <input class="check-input" type="text">
+  </div>
+  <div class="check  room">
+      <h6>Room</h6>
+      <input class="check-input" type="number" min="1" max="10">
+  </div>
+</div>
+<!-- schedule end -->
+
+<div style="height: 80px;"></div>
+
+
+
+<!-- content start -->
+
+<div class="wel-container">
+
+  <div class="left">
+      <h1 class="welcome">WELCOME</h1>
+      <h2 class="hotel-name">Orchid Hotel</h2>
+
+      <p class="w-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugit nihil omnis facere alias architecto nulla ullam, nisi quia veritatis modi est, magnam voluptatum dolore sit mollitia a aut incidunt!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem quasi vitae, eius id minima reiciendis quis. Adipisci quidem vel, accusamus, quas animi ab illo fugit sint non quisquam magni!
+      </p>
+
+      <button class=" btn-about">About Us</button>
+
+  </div>
+  <div class="right">
+      <img src="./images/package-img1.jpg" alt="">
+  </div>
+</div>
+<!-- content end -->
+
+<!-- facility start -->
+<div class="facility">
+  <div class="food-drink">
+      <img src="./images/f-d.png" alt="">
+      <h5>Food&Drink</h5>
+      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
+
+  </div>
+  <div class="outdoor-dining">
+      <img src="./images/outdoor-dining.png" alt="">
+      <h5>Outdoor Dining</h5>
+      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
+
+  </div>
+
+  <div class="playground">
+      <img src="./images/playground.png" alt="">
+      <h5>Playdround</h5>
+      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
+
+  </div>
+  <div class="park">
+      <img src="./images/park.png" alt="">
+      <h5>Park</h5>
+      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
+
+  </div>
+  <div class="swimming-pool">
+      <img src="./images/swimming.png" alt="">
+      <h5>Swimming Pool</h5>
+      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
+
+  </div>
+  <div class="gym">
+      <img src="./images/gym.png" alt="">
+      <h5>GYM</h5>
+      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
+  </div>
+  
+</div>
+<!-- facility end -->
+
+<!--message-accordion start  -->
+
+<div class="message-accordion">
+
+        <div class="left-message">
+          <form action="">
+            <h4 class="send-message">Send Us Message</h4>
+            <input class="name-message" type="text" placeholder="Name" required>
+            <input class="email-message" type="email" placeholder="Email" required>
+            <input class="ph-message" type="text" placeholder="Phone-Number" required>
+            <textarea class="message-area" name="" id="" cols="40" rows="0" placeholder="Enter Message"></textarea>
+            <button class=" btn-about" style="margin: 10px 15px;">Send</button>
+          </form>
+
+        </div>
+
+        <div class="right-accordion">
+          <h4 class="send-message">Asked Question</h4>
+          <div class="accordion w-78 mx-3 mt-4" id="accordionExample" >
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Question 1.
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Question 2.
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Question 3.
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Question 4.
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+            
+        </div>
+ </div>      
+ 
+ <!-- message-accordion -->
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- content end -->
+
+<!-- footer start -->
+    <section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae possimus.</p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw  fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw  fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw  fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
+        
+      </div>
+
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+       
+      </div>
+    </section>
+    <!-- footer end -->
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
