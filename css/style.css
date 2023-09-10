@@ -1,14 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
 
-
-
-/* :root{
-    --primary:#ffff;
-    --secondary:#0000;
-    --third:rgb(0, 255, 255);
-    --last:#efeff2;
-} */
-
 *{
     margin: 0;
     padding: 0;
@@ -70,9 +61,13 @@ nav ul li a{
 
 }
 
+
+
 nav ul li .sign:hover{
-    background-color: rgb(222, 226, 231);
+    background-color: rgba(210, 199, 250, 0.5);  
+   
     border-radius: 30px;
+    
 }
 
 
@@ -86,8 +81,7 @@ nav ul li .sign:hover{
 
 
 .bookNow{
-    background-color: rgba(210, 199, 250, 0.782);
-   
+    background-color: rgba(210, 199, 250, 0.782);  
 }
 
 nav ul li .bookNow:hover{
@@ -107,7 +101,7 @@ nav ul li .bookNow:hover{
     display: grid;
     column-gap: 50px;
     grid-template-columns: auto auto auto auto auto auto;
-    width: 70%;
+    width: 80%;
     margin: 0 auto 20px;
 }
 
@@ -140,14 +134,78 @@ nav ul li .bookNow:hover{
     width: 0;
     left: 0;
     color: #000;
-    bottom: -10px;
+    bottom: -8px;
     transition: 0.5s;
    
 }
-
 .navList li a:hover:after{
     width: 100%;
 }
+
+.event{
+    
+    margin-left: -70px;
+    position: relative;
+}
+
+.navList .event-btn{
+    /* display: inline-block; */
+    position: absolute;
+    top: 13px;
+    left: 100px;
+    border: none;
+    background-color: rgba(210, 199, 250, 0);  
+}
+
+.navList .event-btn:after{
+    content: "";
+    position: absolute;
+    color: #000;
+   background-color: black;
+   height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.navList .event-btn:hover:after{
+    width: 100%;
+}
+
+
+
+.navList .event-menu{
+    padding: 3px 10px ;
+    height: 130px;
+    width: 200px;
+    background-color: #f8f8f8dd;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+   
+}
+ 
+.navList .event-list{
+    text-align: center;
+    padding: 10px;
+   margin-top: 10px;
+    display: block;
+    border:2px solid #000;
+    color: black;
+}
+
+.event-list:hover{
+    background-color: rgba(210, 199, 250, 1);
+    border-color: rgba(210, 199, 250, 1);
+}
+
+.event-btn:focus+.event-menu{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
 
 .footer-logo{
     width: 100px;
@@ -169,6 +227,7 @@ section{
     background-color:  #f8f8f8;
     width: 100%;
     z-index: 1000;
+    margin-top: 80px;
     
 }
 
@@ -188,8 +247,6 @@ section{
     font-size: 15px;
     font-weight: 400px;
     transition: 0.6s;
-    
-
 }
 
 .footer-content li a:hover{

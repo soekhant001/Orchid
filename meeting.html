@@ -1,425 +1,737 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Meeting</title>
-	
-	<link rel="stylesheet" type="text/css" href="./libs/fontawesomepro/css/all.min.css">
-   <style type="text/css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meeting</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./libs/fontawesomepro/css/all.min.css"
+    />
+    <style type="text/css">
       @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Padauk:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Padauk:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
 
-*{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   font-family: 'Roboto', sans-serif,'Padauk', sans-serif;
-}
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none !important;
+        list-style: none;
+        /* font-family: "Roboto", sans-serif, "Padauk", sans-serif; */
+      }
 
-.container {
-    margin: auto;
-    padding: 20px;
-    background-color:#f2ecda;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .first{
-   width: 100%;
-  }
-  .container img{
-   width: 100%;
-   height: auto;
-  }
-  .location{
-    color: red;
-   font-size: 25px;
-   margin: 10px;
-  }
-.description i{
-   float: left;
-   margin-right: 10px;
-}
-.description h3{
-   font-weight: bold;
-}
-.description h1{
-   color: red;
-   padding-bottom: 10px;
-}
-.description form .button1{
-   padding: 10px 30px;
-   margin-top: 10px;
-   margin-left: 43%;
-   color: white;
-   background-color: red;
-   border: none;
-   transition: 1s;
-   margin-bottom: 10px;
-}
-.description form .button1:hover{
-  background-color: #cc655e;
-  color: black;
-  font-weight: bold;
-}
-.venue {
-   color: white;
-   text-align: center;
-padding: 10px 20px;
-background-image: url("./img/meetings-banner.jpg");
-}
-.venue .opacity{
-   background-image:linear-gradient(115deg,
-               rgba(64, 48, 59, 0.38),
-               rgba(107, 93, 102, 0.50)) ;
-   
-}
-.venue h2{
-   margin: 5px;
-   padding: 10px;
-}
-.venue p{
-   font-size: 18px;
-}
-.venue .button2{
-   font-weight: bold;
-  font-size: 15px;
-   border: none;
-   background-color: red;
-   color: white;
-   font-weight: border;
-   padding: 10px 15px;
-   margin: 10px 10px;
-   width: 200px;
-}
-.venue .button2:hover{
-   background-color:gray;
-   color: black;
-}
-.h2{
-   padding: 10px;
-}
-.sheet1,.sheet2{
-   background-color: #f4f4f4;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   border: 5px solid #f4f4f4;
-    width: 250px;
-    height: 150px;
-    padding: 10px;
-    margin-right: 20px;
-}
-.sheets{
-   display: flex;
-}
-.reviews h3{
-   padding: 10px 0;
-}
-.card1,.card2,.card3,.card4{
-    padding: 10px ;
-    margin: 20px;
-   background-color: #f4f4f4;
-   width: 350px;
-   height: 225px;
-   border: 5px solid #f4f4f4;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
-}
-.cards{
-   display: flex;
-}
-.cards h4{
-   padding: 10px 0;
-}
-.cards .date,.sign{
-   text-align: right;
-   font-style: italic;
-}
-.cards .review{
-   padding-top: 10px;
+      h1,
+      h2,
+      h3 {
+        font-size: 25px;
+      }
 
-}
-.cards .sign{
-   font-weight: bolder;
-   margin-bottom:100px;
-}
-.catering img{
-   width: 300px;
-   height: 200px;
-   float: left;
-   padding: 10px;
-}
-.catering p{
-   padding: 10px;
-   margin: 10px;
-}
-.catering br{
-   clear: left;
-}
-.container .why{
-   margin: 0 auto;
-   justify-content: center;
-   width: 80%; 
-}
-.why i{
-   color: red;
-   font-size: 40px;  
-   align-items: center;
-   padding: 10px 50px;
-   background-color: lightgray;
-   float: left;
-   margin: 10px ;
-}
-.why h3{
-   padding: 10px;
-}
-.why br{
-   clear: left;
-}
-.package{
-   display: flex;
-}
-.package1,.package2,.package3{
-   width: 400px;
-   height:auto;
-   background-color: #f4f4f4;
-   border: 5px solid #f4f4f4;
-   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-   padding: 10px;
-   margin-top: 10px;
-   margin-left: 60px;
-}
-.package i{
-   float: left;
-   margin:0 10px;
-   color: red;
-   padding: 10px 0;
-}
-.package h4{
-   color: red;
-      padding: 10px 0;
-      margin:0 10px;
-}
-.package h2{
-   padding: 10px 0;
-   margin:0 10px;
-}
-.package img{
-   padding: 10px;
-   height: auto;
-}
-.package-button1{
-   font-weight: bold;
-  font-size: 15px;
-   border: none;
-   background-color: red;
-   color: white;
-   font-weight: border;
-   padding: 15px 15px;
-   margin: 10px 30px;
-   width: 300px;
-}
+      img {
+        width: 100%;
+      }
 
-.package-button1:hover{
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 76px;
+        background-color: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin: 0 auto;
+        z-index: 10000;
+      }
 
-   background-color:gray;
-   color: black;
-}
-.package .package3 img{
-   width: 100%;
-   height: 300px;
-}
+      .logo {
+        position: relative;
+        width: 130px;
+        top: 4px;
+        padding-bottom: 18px;
+        margin-left: 40px;
+      }
 
-/*.package1 .package-foot i{
-   color: black;
-   margin-left:10px;
-   
-}
-.package1 .package-foot{
-   text-align: center;
-   padding: 10px;
-}*/
+      .nav-bar ul {
+        display: flex;
+        position: relative;
+      }
 
+      nav ul li a {
+        position: relative;
+        display: block;
+        font-weight: 500;
+        padding: 8px 20px;
+        transition: 0.2x;
+        border-radius: 30px;
+        color: #000;
+      }
 
+      nav ul li .sign:hover {
+        background-color: rgb(222, 226, 231);
+        border-radius: 30px;
+      }
 
-   </style>
-</head>
-<body>
-   <div class="container">
-   	<div class="first">
-   	  <div class="img1">
-   	  	<img src="./img/meeting1.jpg" alt="meeting1.jpg">
-   	  </div>
-   	  <div class="description">
-   	  	<div class="location">
-   	  	<i class="fa-solid fa-location-dot"></i>
-   	  	<h3>Orchid</h3>
-   	  </div>
-   	  	<h1>Exceptionl Meeting Experiences</h1>
-   	  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-   	  	<form>
-   	  		<input type="button" name="button1" class="button1"id="button1" value="ENQUIRE NOW">
-   	  	</form>
-   	  </div>
-   	<!-- <div class="img2">
-   		<img src="./img/meetings-banner.jpg" alt="meetings-banner.jpg">
-   	</div> --> 
-   	
-   	<div class="venue">
-   		<div class="opacity">
-   		<h2>Find a Suitable Venue</h2>
-   		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-   		<form>
-   			<input type="button" name="button2" id="button2" class="button2" value="VIEW ALL VENUES">
-   		</form>
-   	</div>
-     	  </div>
+      .sign,
+      .bookNow {
+        position: relative;
+        font-size: 17px;
+        margin-right: 80px;
+      }
 
-     	  <h2 class="h2">Additional Information</h2>
-     	  <div class="sheets">
-     	  	<div class="sheet1">
-     	  		<p>Fact Sheet</p>
-     	  		<i class="fa-solid fa-download"></i>
-   			<a href="#">Download PDF</a>
-     	  	</div>
+      .bookNow {
+        background-color: rgba(210, 199, 250, 0.782);
+      }
 
-     	  	<div class="sheet2">
-     	  		<p>Fact Sheet</p>
-     	  		<i class="fa-solid fa-download"></i>
-   			<a href="#">Download PDF</a>
-     	  	</div>
-     	  </div>
+      nav ul li .bookNow:hover {
+        background-color: rgba(158, 131, 255, 0.968);
+      }
 
-     	  <div class="reviews">
-     	  	<h3>Guest Reviews</h3>
-     	  	<div class="cards">
-     	  		
-     	  	<div class="card1">
-     	  		<h4>Quite good</h4>
-     	  		<p class="date">March 2019</p>
-     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-     	  		<p class="sign">John I</p>
-     	  	</div>
-			
-     	  	<div class="card2">
-     	  		<h4>Quite good</h4>
-     	  		<p class="date">March 2019</p>
-     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-     	  		<p class="sign">John A</p>
-     	  	</div>
+      .nav-list-container {
+        position: fixed;
+        top: 75px;
+        width: 100%;
+        background-color: #f8f8f8;
+        z-index: 1000;
+      }
 
-     	  	<div class="card3">
-     	  		<h4>Quite good</h4>
-     	  		<p class="date">March 2019</p>
-     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-     	  		<p class="sign">John B</p>
-     	  	</div>
+      .nav-list-container .navList {
+        display: grid;
+        column-gap: 50px;
+        grid-template-columns: auto auto auto auto auto auto;
+        width: 80%;
+        margin: 0 auto 20px;
+      }
 
-     	  	<div class="card4">
-     	  		<h4>Quite good</h4>
-     	  		<p class="date">March 2019</p>
-     	  		<p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-     	  		<p class="sign">John C</p>
-     	  	</div>
-     	  </div>
-     	</div>
+      .navList {
+        background-color: rgba(210, 199, 250, 0.782);
+        height: 48px;
+        border-radius: 8px;
+      }
 
-     	<div class="catering">
-     		<h2>Catering</h2>
-     		<img src="./img/catering.jpg" alt="catering.jpg">
-     		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-     		<br>
-     	</div>
-   </div>
+      .navList li {
+        text-align: center;
+        padding: 13px 0px 20px;
+      }
+
+      .navList li a {
+        position: relative;
+        color: #000;
+        font-size: 17px;
+      }
+
+      .navList li a:after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        height: 3px;
+        width: 0;
+        left: 0;
+        color: #000;
+        bottom: -10px;
+        transition: 0.5s;
+      }
+
+      .navList li a:hover:after {
+        width: 100%;
+      }
+
+      .footer-logo {
+        width: 100px;
+        padding-bottom: 20px;
+      }
+
+      section {
+        padding: 80px 13% 70px;
+      }
+
+      .footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        gap: 3.5rem;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f8f8f8;
+        width: 100%;
+        z-index: 1000;
+        margin-top: 80px;
+      }
+
+      .footer-content h4 {
+        color: #000;
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+      }
+
+      .footer-content li {
+        margin-bottom: 16px;
+      }
+
+      .footer-content li a {
+        display: block;
+        color: #000;
+        font-size: 15px;
+        font-weight: 400px;
+        transition: 0.6s;
+      }
+
+      .footer-content li a:hover {
+        transform: translateX(-6px);
+      }
+
+      .footer-content p {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 20px 0;
+        padding-bottom: 20px;
+      }
+
+      .icons a {
+        font-size: 20px;
+        color: #000;
+        margin-right: 17px;
+        transition: 0.5s;
+      }
+
+      .icons a:hover {
+        transform: translateY(-5px);
+        display: inline-block;
+      }
+      /* Mi Phyu */
+      .container {
+        margin: 20px auto;
+        padding-left: 20px;
+        width: 80%;
+      }
+      .first {
+        margin: 0 auto;
+      }
+      .container img {
+        width: 100%;
+        height: auto;
+      }
+      .location {
+        color: #272d38;
+        font-size: 25px;
+        margin: 10px;
+      }
+      .description i {
+        float: left;
+        margin-right: 10px;
+        padding-left: 20px;
+      }
+      .description h3 {
+        font-weight: bold;
+      }
+      .description h1 {
+        color: #272d38;
+        padding-bottom: 10px;
+      }
+      .description form .button1 {
+        padding: 10px 30px;
+        margin-top: 10px;
+        margin-left: 43%;
+
+        background-color: rgba(210, 199, 250, 1);
+        /*border: none;*/
+
+        margin-bottom: 10px;
+      }
+      .description form .button1:hover {
+        background-color: rgba(158, 131, 255, 1);
+        color: black;
+        font-weight: bold;
+        border: none;
+      }
+      .venue {
+        margin: 20px;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+        background-image: url("./TPS_Images/meetings-banner.jpg");
+      }
+      .venue .opacity {
+        background-image: linear-gradient(
+          115deg,
+          rgba(64, 48, 59, 0.38),
+          rgba(107, 93, 102, 0.5)
+        );
+      }
+      .venue h2 {
+        margin: 5px;
+        padding: 10px;
+      }
+      .venue p {
+        font-size: 18px;
+      }
+      .venue .button2 {
+        font-weight: bold;
+        font-size: 15px;
+        border: none;
+        background-color: rgba(200, 199, 250, 0.782);
+        color: #324563;
+        font-weight: border;
+        padding: 10px 15px;
+        margin: 10px 10px;
+        width: 200px;
+      }
+      .venue .button2:hover {
+        background-color: rgba(158, 131, 255, 1);
+        color: black;
+      }
+      .types {
+        text-align: center;
+        padding: 10px;
+        font-style: italic;
+      }
+      .size_of_events {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 450px 450px 450px;
+        grid-gap: 30px;
+      }
+      .size_of_events h2,
+      p {
+        padding: 10px;
+      }
+      .size_of_events p {
+        line-height: 25px;
+      }
+      .h2 {
+        padding: 10px;
+      }
+      .sheet1,
+      .sheet2 {
+        background-color: #f4f4f4;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: 5px solid #f4f4f4;
+        width: 250px;
+        height: 150px;
+        padding: 10px;
+        margin-right: 20px;
+      }
+      .sheets {
+        display: flex;
+      }
+      .reviews h3 {
+        padding: 10px 0;
+      }
+
+      .catering img {
+        width: 300px;
+        height: 200px;
+        float: left;
+        padding: 10px;
+      }
+      .catering p {
+        padding: 10px;
+        margin: 10px;
+      }
+      .catering br {
+        clear: left;
+      }
+      .container .why {
+        margin: 0 auto;
+        justify-content: center;
+        width: 80%;
+      }
+      .why i {
+        color: #cf0a1e;
+        font-size: 40px;
+        align-items: center;
+        padding: 10px 50px;
+        background-color: lightgray;
+        float: left;
+        margin: 10px;
+      }
+      .why h3 {
+        padding: 10px;
+      }
+      .why br {
+        clear: left;
+      }
+      .package {
+        display: flex;
+      }
+      .package1,
+      .package2,
+      .package3 {
+        width: 400px;
+        height: auto;
+        background-color: #f4f4f4;
+        border: 5px solid #f4f4f4;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 60px;
+      }
+      .package i {
+        float: left;
+        margin: 0 10px;
+        color: red;
+        padding: 10px 0;
+      }
+      .package h4 {
+        color: red;
+        padding: 10px 0;
+        margin: 0 10px;
+      }
+      .package h2 {
+        padding: 10px 0;
+        margin: 0 10px;
+      }
+      .package img {
+        padding: 10px;
+        height: auto;
+      }
+      .package-button1 {
+        font-weight: bold;
+        font-size: 15px;
+        border: none;
+        background-color: rgba(200, 199, 250, 1);
+        color: #1a1716;
+        font-weight: border;
+        padding: 15px 15px;
+        margin: 10px 30px;
+        width: 300px;
+      }
+
+      .package-button1:hover {
+        background-color: rgba(158, 131, 255, 1);
+        color: #171716;
+      }
+      .package .package3 img {
+        width: 100%;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./TPS_Images/logo1.jpg" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="./takethis/new.html">Room</a></li>
+        </div>
+        <div class="event">
+          <li><a href="./celebration1.html">Event</a></li>
+        </div>
+        <div class="restaurants">
+          <li><a href="./fooddrink.html">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="./contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="first">
+        <div class="img1" style="width: 100% !important">
+          <img
+            src="./TPS_Images/meeting1.jpg"
+            alt="meeting1.jpg"
+            style="width: 100%"
+          />
+        </div>
+        <div class="description">
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Orchid</h3>
+          </div>
+          <h1>
+            Special gatherings will become even invaluable at ORCHID HOTEL
+          </h1>
+          <p>
+            ORCHID HOTELS offer premium services so that your business meetings
+            are a success. Equipped with a video conference system, large screen
+            projector, and even simultaneous interpretation services, our
+            conference rooms and banquet halls are the perfect space for any
+            event ranging from international conventions to small meetings.
+          </p>
+          <form>
+            <input
+              type="button"
+              name="button1"
+              class="button1"
+              id="button1"
+              value="ENQUIRE NOW"
+            />
+          </form>
+        </div>
+
+        <h1 class="types">ORCHID HOTEL Conference Types</h1>
+        <div class="size_of_events">
+          <div class="event1">
+            <img src="./TPS_Images/event_img1.jpg" alt="event_img1.jpg" />
+            <h2>Large-scale Events</h2>
+            <p>
+              We offer ballrooms that can host weddings and international
+              conferences, such as the G20 Conference, WTTC, IEC, ASTA, PATA,
+              ESCAP, and more. Enjoy services based on creativity and experience
+              in modern and refined event spaces.
+            </p>
+          </div>
+
+          <div class="event2">
+            <img src="./TPS_Images/event_img2.jpg" alt="event_img2.jpg" />
+            <h2>Small and Mid-sized Events</h2>
+            <p>
+              ORCHID HOTEL offers the best location for personalized small and
+              mid-sized events. Find an event space with a size that is most
+              suitable for you. Give your event a boost of elegance with modern
+              facilities and attentive services.
+            </p>
+          </div>
+
+          <div class="event3">
+            <img src="./TPS_Images/event_img3.jpg" alt="event_img3.jpg" />
+            <h2>Small Gatherings</h2>
+            <p>
+              Make your gathering even more special with private services that
+              cater to special gatherings of family and friends or important
+              meetings.
+            </p>
+          </div>
+        </div>
+        <div class="venue">
+          <div class="opacity">
+            <h2>Find a Suitable Venue</h2>
+            <p>
+              Choose from our fully-equipped venues, each appointed with
+              high-speed internet access and seamless audio-visual equipment,
+              ensuring a truly memorable event for you and your guests.
+            </p>
+            <form>
+              <input
+                type="button"
+                name="button2"
+                id="button2"
+                class="button2"
+                value="VIEW ALL VENUES"
+              />
+            </form>
+          </div>
+        </div>
+
+        <h2 class="h2">Additional Information</h2>
+        <div class="sheets">
+          <div class="sheet1">
+            <p>Fact Sheet</p>
+            <i class="fa-solid fa-download"></i>
+            <a href="#">Download PDF</a>
+          </div>
+
+          <div class="sheet2">
+            <p>Rack Brochure</p>
+            <i class="fa-solid fa-download"></i>
+            <a href="#">Download PDF</a>
+          </div>
+        </div>
+
+        <div class="catering">
+          <h2>Catering</h2>
+          <img src="./TPS_Images/catering.jpg" alt="catering.jpg" />
+          <p>
+            Taste a tantalising smorgasbord of local and international cuisine
+            with our premium catering service.
+          </p>
+          <br />
+        </div>
+      </div>
       <div class="why">
-      	<h2>Why Orchid Hotel</h2>
-      	
-      	<i class="fa-solid fa-user"></i>
-      		<h3>Superior Product Knowledge</h3>
-      		<p>Get the help you need to plan for an upcoming event. Our friendly PARKROYAL people are trained to handle every detail – from being responsive to your specific needs to offering flexibility in negotiations.</p>
-      	<br>
+        <h2>Why Orchid Hotel</h2>
 
+        <i class="fa-solid fa-user"></i>
+        <h3>Superior Product Knowledge</h3>
+        <p>
+          Get the help you need to plan for an upcoming event. Our friendly
+          ORCHID people are trained to handle every detail – from being
+          responsive to your specific needs to offering flexibility in
+          negotiations.
+        </p>
+        <br />
 
-         
-      	<i class="fa-solid fa-magnifying-glass"></i>
-      		<h3>Guided site visits</h3>
-      		<p>When you drop by for a site visit, a senior staff member will accompany you throughout your tour of our venues.</p>
-      
-         <br>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <h3>Guided site visits</h3>
+        <p>
+          When you drop by for a site visit, a senior staff member will
+          accompany you throughout your tour of our venues.
+        </p>
 
+        <br />
 
-      	<i class="fa-sharp fa-solid fa-handshake"></i>
-      		<h3>Complete event management</h3>
-      		<p>A dedicated Conference Service Manager will see to all your event requirements from start to finish. Need technical support? Our AV expert is on hand to provide assistance.</p>
-      	<br>
+        <i class="fa-sharp fa-solid fa-handshake"></i>
+        <h3>Complete event management</h3>
+        <p>
+          A dedicated Conference Service Manager will see to all your event
+          requirements from start to finish. Need technical support? Our AV
+          expert is on hand to provide assistance.
+        </p>
+        <br />
 
-      	<i class="fa-regular fa-calendar-days"></i>
-      		<h3>Elevating your event</h3>
-      		<p>Our PARKROYAL people are committed to understanding your event needs and responding quickly to any unforeseen issues. When it comes to food and beverage, our experienced culinary team will serve up refreshments and meals incorporating local flavours..</p>
-      
-         <br>
+        <i class="fa-regular fa-calendar-days"></i>
+        <h3>Elevating your event</h3>
+        <p>
+          Our ORCHID people are committed to understanding your event needs and
+          responding quickly to any unforeseen issues. When it comes to food and
+          beverage, our experienced culinary team will serve up refreshments and
+          meals incorporating local flavours..
+        </p>
 
-            <i class="fa-sharp fa-solid fa-credit-card"></i>
-      		<h3>Personalised payments</h3>
-      		<p>We’re able to accommodate customised billing procedures. Simply notify us in advance so we can guarantee the delivery of your final bill within five business days, upon completion of your event..</p>
-      
-         <br>
+        <br />
 
+        <i class="fa-sharp fa-solid fa-credit-card"></i>
+        <h3>Personalised payments</h3>
+        <p>
+          We’re able to accommodate customised billing procedures. Simply notify
+          us in advance so we can guarantee the delivery of your final bill
+          within five business days, upon completion of your event..
+        </p>
 
+        <br />
       </div>
-       <h2>Meetings and Events Packages</h2>
+      <h2>Meetings and Events Packages</h2>
       <div class="package">
-      	
-      	<div class="package1">
-      	<i class="fa-solid fas fa-bed-empty"></i>
-      	<h4>ROOMS AND SUITES</h4>
-      	<h2>Exclusively Yours</h2>
-      	<p>Up to 30% savings on stays and special breakfast offers</p>
-      	<img src="./img/package-img1.jpg" alt="package-img1.jpg">
-      	<form>
-      		<input type="button" name="package-button1" id="package-button1" class="package-button1" value="MORE DETAILS">
-      	</form>
-      	
+        <div class="package1">
+          <i class="fa-solid fa-bed"></i>
+          <h4>ROOMS AND SUITES</h4>
+          <h2>Exclusively Yours</h2>
+          <p>Up to 30% savings on stays and special breakfast offers</p>
+          <img src="./TPS_Images/package-img1.jpg" alt="package-img1.jpg" />
+          <form>
+            <input
+              type="button"
+              name="package-button1"
+              id="package-button1"
+              class="package-button1"
+              value="MORE DETAILS"
+            />
+          </form>
+        </div>
 
-      	<!-- <div class="package-foot">
-      	<i class="fa-sharp fa-solid fa-map-location-dot"></i>
-      	<p>Selected Properties</p>
-      	</div> -->
+        <div class="package2">
+          <i class="fa-solid fa-utensils"></i>
+          <h4>DINING</h4>
+          <h2>Sunday Brunch Buffet</h2>
+          <p>
+            Spend quality time with your friends and family at our delightful
+            Brunch Buffet! Available every Sunday from
+          </p>
+          <img
+            src="./TPS_Images/Sunday Brunch Buffet.jpg "
+            alt="Sunday Brunch Buffet.jpg"
+          />
+          <form>
+            <input
+              type="button"
+              name="package-button1"
+              id="package-button1"
+              class="package-button1"
+              value="MORE DETAILS"
+            />
+          </form>
+        </div>
+
+        <div class="package3">
+          <i class="fa-solid fa-utensils"></i>
+          <h4>DINING</h4>
+          <h2>Dim Sum Lunch Buffet</h2>
+          <p>
+            Experience the signature authentic taste of Asia in our Dim Sum
+            Lunch Buffet at Sichuan Dou
+          </p>
+          <img
+            src="./TPS_Images/Dim Sum Lunch Buffet.jpg "
+            alt="Dim Sum Lunch Buffet.jpg"
+          />
+          <form>
+            <input
+              type="button"
+              name="package-button1"
+              id="package-button1"
+              class="package-button1"
+              value="MORE DETAILS"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
       </div>
 
-      <div class="package2">
-      <i class="fa-solid fa-utensils"></i>
-      	<h4> DINING</h4>
-      	<h2>Sunday Brunch Buffet</h2>
-      	<p>Spend quality time with your friends and family at our delightful Brunch Buffet! Available every Sunday from</p>
-      	<img src="./img/Sunday Brunch Buffet.jpg" alt="Sunday Brunch Buffet.jpg">
-      	<form>
-      		<input type="button" name="package-button1" id="package-button1" class="package-button1" value="MORE DETAILS">
-      	</form>
-      	
-
-      	<!-- <div class="package-foot">
-      	<i class="fa-sharp fa-solid fa-map-location-dot"></i>
-      	<p>Selected Properties</p>
-      	</div> -->
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
       </div>
 
-      <div class="package3">
-     <i class="fa-solid fa-utensils"></i>
-      	<h4> DINING</h4>
-      	<h2>Dim Sum Lunch Buffet</h2>
-      	<p>Experience the signature authentic taste of Asia in our Dim Sum Lunch Buffet at Sichuan Dou</p>
-      	<img src="./img/Dim Sum Lunch Buffet.jpg" alt="Dim Sum Lunch Buffet.jpg">
-      	<form>
-      		<input type="button" name="package-button1" id="package-button1" class="package-button1" value="MORE DETAILS">
-      	</form>
-      	
-
-      	<!-- <div class="package-foot">
-      	<i class="fa-sharp fa-solid fa-map-location-dot"></i>
-      	<p>Selected Properties</p>
-      	</div> -->
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
       </div>
-
-      </div>
-
-   </div>
-</body>
+    </section>
+  </body>
 </html>

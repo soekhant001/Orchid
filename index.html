@@ -4,516 +4,1025 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
     <style>
-      .c-item{
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h2 {
+        opacity: 0.8;
+      }
+
+      ::placeholder {
+        color: black;
+        opacity: 1;
+      }
+      #accordionExample {
+        padding: 30px;
+      }
+      .c-item {
         height: 700px;
-       }
-
-      .c-container{
-      position: relative;
-      top: 123px;
-       }
-
-      .schedule-container{
-          position: relative;
-          bottom: -50px;
-          z-index: 100;
-          margin: 20px auto;
-          width: 70%;
-          height: 120px;
-          background-color: rgba(210, 199, 250, 1);
-          display: flex;
-          justify-content: space-evenly;
-          gap: 10px;
-          border-radius: 8px;
       }
 
-      .check{
-          
-          width: 150px;
-          height: 100px;
-          padding-top: 15px;
-         
+      .c-container {
+        position: relative;
+        top: 123px;
       }
 
-      .check-in{
-         
-          height: 100%;
-
+      .schedule-container {
+        position: relative;
+        bottom: -50px;
+        z-index: 100;
+        margin: 20px auto;
+        width: 80%;
+        height: 120px;
+        background-color: rgba(210, 199, 250, 1);
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        border-radius: 8px;
       }
 
-      .check-out{
-         
-          height: 100%;
-
+      .check {
+        width: 150px;
+        height: 100px;
+        padding-top: 15px;
       }
 
-      .adult{
-        
-          height: 100%;
-
+      .check-in {
+        height: 100%;
       }
 
-      .child{
-       
-          height: 100%;
-
+      .check-out {
+        height: 100%;
       }
 
-      .room{
-         
-          height: 100%;
-
+      .adult {
+        height: 100%;
       }
 
-      .check-input{
-          background-color: rgba(210, 199, 250, 1);
-          width: 100%;
-          margin-top: 15px;
-          border: none;
-          border-bottom: 1px solid black;
-          outline: none;
-          width: 120px;
+      .child {
+        height: 100%;
+      }
+
+      .room {
+        height: 100%;
+      }
+
+      .check-input {
+        background-color: rgba(210, 199, 250, 1);
+        width: 100%;
+        margin-top: 15px;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        width: 120px;
       }
 
       /* Welcome */
 
-      .wel-container{
-            width: 70%;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-            gap: 50px;
-            
+      .wel-container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 50px;
+      }
+      .welcome {
+        font-size: 100px;
+        opacity: 0.2;
+        text-shadow: 10px 10px 10px black;
+      }
 
-        }
-        .welcome{
-            font-size: 100px;
-            opacity: 0.1;
-            text-shadow: 10px 10px 10px black;
+      .hotel-name {
+        font-size: 60px;
+        position: relative;
+        top: -90px;
+      }
 
-        }
+      .left {
+        width: 550px;
+      }
+      .w-p {
+        margin-top: -70px;
+      }
 
-        .hotel-name{
-            font-size: 60px;
-            position: relative;
-            top: -90px;
-        }
-
-
-        .left{
-            width: 500px;
-
-        }
-        .w-p{
-            margin-top: -70px;
-        }
- 
-
-        .btn-about{
-            width: 100px;
-            height: 40px;
-            margin-top: px;
-            border: 2px solid rgba(210, 199, 250, 0.782);
-            background-color: rgba(210, 199, 250, 0.782);
-            border-radius: 6px;
-        }
-
-        .right img{
-            width: 500px;
-        }
-
-        /* facility start */
-       .facility{
-            background-color: #f8f8f8;
-            width: 70%;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-content: start;
-            gap: 50px 80px;
-            padding: 50px ;
-            margin: 30px auto;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        
-    }
-    .facility img {
-
+      .btn-about {
         width: 100px;
-        height: 90px;  
-    }
-    
-    .food-drink{
-  
+        height: 40px;
+        margin-top: px;
+        border: 2px solid rgba(210, 199, 250, 0.782);
+        background-color: rgba(210, 199, 250, 0.782);
+        border-radius: 6px;
+      }
+
+      .right img {
+        width: 550px;
+      }
+
+      /* facility start */
+      .facility {
+        background-color: #f8f8f8;
+        width: 80%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: start;
+        gap: 50px 80px;
+        padding: 50px;
+        margin: -50px auto;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .facility img {
+        width: 100px;
+        height: 90px;
+      }
+
+      .food-drink {
         width: 250px;
         height: 150px;
+      }
 
-    }
-
-    .outdoor-dining{
-      
+      .outdoor-dining {
         width: 250px;
         height: 150px;
+      }
 
-    }
-
-    .playground{
-      
+      .playground {
         width: 250px;
         height: 150px;
-    }
+      }
 
-    .park{
-     
+      .park {
         width: 250px;
         height: 150px;
         margin-top: 60px;
+      }
 
-    }
-
-    .gym{
-     
+      .gym {
         width: 250px;
         height: 150px;
         margin-top: 60px;
+      }
 
-    }
-
-    .swimming-pool{     
+      .swimming-pool {
         width: 250px;
         height: 150px;
         margin-top: 60px;
-    }
-        /* facility end */
+      }
 
-        /* message & accordion start */
+      .facility-heading {
+        width: 80%;
+        margin: 40px auto 0;
+      }
 
-        .message-accordion{
+      .back-Name {
+        font-size: 100px;
+        opacity: 0.2;
+        text-shadow: 10px 10px 10px black;
+      }
 
-          margin: 0 auto;
-          width: 70%;
-          height: 500px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
+      .facility-head {
+        font-size: 60px;
+        position: relative;
+        top: -90px;
+      }
+      /* facility end */
 
-        }
-        .message-accordion .left-message input{
-          display: inline-block;
-          width: 90%;
-          margin: 10px 15px;
-          padding-left: 5px;
-          height: 40px;
-          outline: none;
-          border: none;
-          border-bottom: 2px solid black;
-          background-color: #f8f8f8;
-          
-        }
+      /* Fascinating start */
 
-        .send-message{
-          border: 2px solid rgba(210, 199, 250, 0.782);
-          background-color: rgba(210, 199, 250, 0.782);
-          text-align: center;
-          width: 90%;
-          height: 40px;
-          padding-top: 3px;
-          padding-bottom: 3px;
-          margin: 10px 15px;
-          border-radius: 6px;
-         
-        }
+      .fascinating-heading {
+        width: 80%;
+        margin: 80px auto 0;
+      }
 
-        .message-area{
-          margin-left: 14px;
-          margin-bottom: 10px;
-          width: 90%;
-          height: 70px;
-          padding-top: 40px;
-          padding-left: 5px;
-          outline: none;
-          border: none;
-          border-bottom: 2px solid black;
-          background-color: #f8f8f8;
+      .back-name {
+        font-size: 100px;
+        opacity: 0.2;
+        text-shadow: 10px 10px 10px black;
+      }
 
-        }
+      .fascinating-head {
+        font-size: 60px;
+        position: relative;
+        top: -90px;
+      }
 
-        .left-message{
-          margin-top: 20px;
-          padding: 30px;
-          width: 45%;
-          height: 450px;
-          background-color: #f8f8f8;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .wrapper {
+        width: 80%;
+        height: 900px;
+        background-color: #f8f8f8;
+        margin: -50px auto 0;
+        display: flex;
+      }
 
+      .wrapper .leftContainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 50%;
+      }
 
-        }
+      .wrapper .leftContainer .b-1,
+      .b-2,
+      .b-3,
+      .b-4,
+      .b-5,
+      .b-6 {
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        margin-left: 5px;
+      }
 
-        .right-accordion{
-          margin-top: 20px;
-          padding: 30px;
-          width: 45%;
-          height: 450px;
-          background-color: #f8f8f8;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          
+      .wrapper .leftContainer .b-2_body {
+        display: inline-block;
+        margin-top: 15%;
 
-        }
+        margin-left: 25%;
+      }
 
+      .wrapper .leftContainer .fa-display,
+      .fa-dollar,
+      .fa-resolving,
+      .fa-wifi,
+      .fa-mug-saucer,
+      .fa-person {
+        font-size: 30px;
+        color: rgba(210, 199, 250);
+      }
 
-        /* message & accordion end */
+      .wrapper .rightContainer {
+        width: 45%;
+      }
 
-  </style>
+      .wrapper .rightContainer img {
+        margin-top: 30px;
+        width: 600px;
+        height: 830px;
+      }
+
+      .wrapper .box:hover {
+        background-color: rgba(210, 199, 250);
+      }
+
+      .wrapper .box:hover i {
+        color: white;
+      }
+
+      /* Fascinating end */
+
+      /* message & accordion start */
+
+      .message-accordion {
+        margin: 50px auto -20px;
+        width: 80%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .message-accordion .left-message input {
+        display: inline-block;
+        width: 90%;
+        margin: 10px 15px;
+        padding-left: 5px;
+        height: 40px;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: #f8f8f8;
+      }
+
+      .send-message {
+        border: 2px solid rgba(210, 199, 250, 0.782);
+        background-color: rgba(210, 199, 250, 0.782);
+        text-align: center;
+        width: 90%;
+        height: 40px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin: 10px 15px;
+        border-radius: 6px;
+      }
+
+      .message-area {
+        margin-left: 14px;
+        margin-bottom: 10px;
+        width: 90%;
+        height: 70px;
+        padding-top: 40px;
+        padding-left: 5px;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: #f8f8f8;
+      }
+
+      .left-message {
+        margin-top: 20px;
+        padding: 30px;
+        width: 45%;
+        height: 450px;
+        background-color: #f8f8f8;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      .right-accordion {
+        margin-top: 20px;
+        padding: 30px;
+        width: 45%;
+        height: 450px;
+        background-color: #f8f8f8;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      /* message & accordion end */
+
+      /* review start */
+      .review-head {
+        width: 80%;
+        margin: 0 auto -30px;
+      }
+
+      .review {
+        font-size: 100px;
+        opacity: 0.2;
+        text-shadow: 10px 10px 10px black;
+      }
+
+      .review-writer {
+        font-size: 60px;
+        position: relative;
+        top: -93px;
+      }
+
+      .review-card-container {
+        position: relative;
+        background-color: #f8f8f8;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 50px 10px;
+        width: 80%;
+        height: 430px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+
+      .review-card-container .top {
+        margin-top: 70px;
+      }
+
+      .card {
+        position: relative;
+        width: 300px;
+        margin-left: 45px;
+        margin-bottom: 20px;
+        height: 280px;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      .card img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        border-radius: 50%;
+        right: 0;
+        left: 0;
+        top: -50px;
+        margin: auto;
+      }
+
+      .card-body {
+        text-align: center;
+      }
+
+      .card-body h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 45px;
+      }
+
+      .card-body .star {
+        margin-bottom: 5px;
+      }
+      .card .stars .fa-star {
+        font-size: 20px;
+        color: rgba(232, 192, 15, 0.632);
+      }
+
+      .card-body p {
+        text-align: justify;
+        padding: 10px 15px;
+        margin-top: 10px;
+      }
+
+      .card-icon {
+        font-size: 25px;
+        margin: -40px auto 40px;
+        padding: 0 10px;
+      }
+
+      .ig {
+        color: #fc8f67;
+      }
+
+      .card:hover {
+        background-color: rgba(210, 199, 250, 0.782);
+      }
+
+      .btn-review {
+        /* margin-top: 0px; */
+        width: 100px;
+        height: 40px;
+        position: absolute;
+        right: 65px;
+        bottom: 20px;
+        border: 2px solid rgba(210, 199, 250);
+        background-color: rgba(210, 199, 250);
+        border-radius: 6px;
+      }
+
+      /* review end */
+    </style>
   </head>
   <body>
-
     <!-- heading start -->
-    
-      <header>
-        <div class="logo">
-          <img src="./images/logo1.png" alt="hotelLogo" />
-        </div>
-  
-        <nav class="nav-bar">
-              <ul class="nav-list">
-                <li>
-                  <div class="sign">
-                    <a href="">
-                        <i class="fa-solid fa-user"></i>
-                        Sign In/Up and Save 10% </a>
-                  </div>
-                </li>
-      
-                <li>
-                  <div class="bookNow">
-                      <a href="">Book Now</a>
-                  </div>
-                </li>
-              </ul>
-              
-        </nav>  
+
+    <header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logo1.png" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
-   
-<div class="nav-list-container">
-  <ul class="navList">     
-    <div class="room"><li><a href="">Room</a></li></div>
-    <div class="event"><li><a href="">Event</a></li></div>
-    <div class="restaurants"><li><a href="">Restaurants</a></li></div>
-    <div class="s-f"><li><a href="">Services & Facilities</a></li></div>
-    <div class="blog"><li><a href="">Blog</a></li></div>
-    <div class="contact"><li><a href="">Contact</a></li></div>
-</ul>
-</div>
-<div id="carouselExampleFade" class="carousel slide carousel-fade c-container">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./images/pool.webp" class="d-block w-100 c-item" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/room1.jpg" class="d-block w-100 c-item" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/room2.jpg" class="d-block w-100 c-item" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- heading end -->
 
-<!-- schedule start -->
-<div class="schedule-container">
-  <div class="check  check-in">
-      <h6>Check In</h6>
-      <input class="check-input" type="date">
-  </div>
-  <div class="check  check-out">
-      <h6>Check Out</h6>
-      <input class="check-input" type="date">
-  </div>
-  <div class="check  adult">
-      <h6>Adult</h6>
-      <input class="check-input" type="text">
-  </div>
-  <div class="check  child">
-      <h6>Childs</h6>
-      <input class="check-input" type="text">
-  </div>
-  <div class="check  room">
-      <h6>Room</h6>
-      <input class="check-input" type="number" min="1" max="10">
-  </div>
-</div>
-<!-- schedule end -->
-
-<div style="height: 80px;"></div>
-
-
-
-<!-- content start -->
-
-<div class="wel-container">
-
-  <div class="left">
-      <h1 class="welcome">WELCOME</h1>
-      <h2 class="hotel-name">Orchid Hotel</h2>
-
-      <p class="w-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugit nihil omnis facere alias architecto nulla ullam, nisi quia veritatis modi est, magnam voluptatum dolore sit mollitia a aut incidunt!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem quasi vitae, eius id minima reiciendis quis. Adipisci quidem vel, accusamus, quas animi ab illo fugit sint non quisquam magni!
-      </p>
-
-      <button class=" btn-about">About Us</button>
-
-  </div>
-  <div class="right">
-      <img src="./images/package-img1.jpg" alt="">
-  </div>
-</div>
-<!-- content end -->
-
-<!-- facility start -->
-<div class="facility">
-  <div class="food-drink">
-      <img src="./images/f-d.png" alt="">
-      <h5>Food&Drink</h5>
-      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
-
-  </div>
-  <div class="outdoor-dining">
-      <img src="./images/outdoor-dining.png" alt="">
-      <h5>Outdoor Dining</h5>
-      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
-
-  </div>
-
-  <div class="playground">
-      <img src="./images/playground.png" alt="">
-      <h5>Playdround</h5>
-      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
-
-  </div>
-  <div class="park">
-      <img src="./images/park.png" alt="">
-      <h5>Park</h5>
-      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
-
-  </div>
-  <div class="swimming-pool">
-      <img src="./images/swimming.png" alt="">
-      <h5>Swimming Pool</h5>
-      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
-
-  </div>
-  <div class="gym">
-      <img src="./images/gym.png" alt="">
-      <h5>GYM</h5>
-      <p class="facility-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi esse cumque distinctio voluptate ipsa alias illo fugiat. </p>
-  </div>
-  
-</div>
-<!-- facility end -->
-
-<!--message-accordion start  -->
-
-<div class="message-accordion">
-
-        <div class="left-message">
-          <form action="">
-            <h4 class="send-message">Send Us Message</h4>
-            <input class="name-message" type="text" placeholder="Name" required>
-            <input class="email-message" type="email" placeholder="Email" required>
-            <input class="ph-message" type="text" placeholder="Phone-Number" required>
-            <textarea class="message-area" name="" id="" cols="40" rows="0" placeholder="Enter Message"></textarea>
-            <button class=" btn-about" style="margin: 10px 15px;">Send</button>
-          </form>
-
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="">Room</a></li>
         </div>
-
-        <div class="right-accordion">
-          <h4 class="send-message">Asked Question</h4>
-          <div class="accordion w-78 mx-3 mt-4" id="accordionExample" >
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Question 1.
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Question 2.
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Question 3.
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Question 4.
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam ?
-                </div>
-              </div>
-            </div>
-            
-
+        <div class="event">
+         <button class="event-btn">Event</button>
+          <div class="event-menu">
+            <a href="./meeting.html" class="event-list">Meeting</a>
+            <a href="./celebration1.html" class="event-list">Celebration</a>
           </div>
-            
+
         </div>
- </div>      
- 
- <!-- message-accordion -->
+        <div class="restaurants">
+          <li><a href="fooddrink.html" style="margin-left: -150px;">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="" style="margin-left: -50px;">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html" style="margin-left: -25px;">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="contact.html" style="margin-left: -25px;">Contact</a></li>
+        </div>
+      </ul>
+    </div>
 
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade c-container"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./images/pool.webp"
+            class="d-block w-100 c-item"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/room1.jpg"
+            class="d-block w-100 c-item"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/room2.jpg"
+            class="d-block w-100 c-item"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- heading end -->
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- content end -->
+    <!-- schedule start -->
+    <div class="schedule-container">
+      <div class="check check-in">
+        <h6>Check In</h6>
+        <input class="check-input" type="date" />
+      </div>
+      <div class="check check-out">
+        <h6>Check Out</h6>
+        <input class="check-input" type="date" />
+      </div>
+      <div class="check adult">
+        <h6>Adult</h6>
+        <input
+          class="check-input"
+          type="text"
+          placeholder="0 adult"
+          style="color: black"
+        />
+      </div>
+      <div class="check child">
+        <h6>Childs</h6>
+        <input class="check-input" type="text" placeholder="0 child" />
+      </div>
+      <div class="check room">
+        <h6>Room</h6>
+        <input
+          class="check-input"
+          type="number"
+          placeholder="0 room"
+          min="1"
+          max="10"
+        />
+      </div>
+    </div>
+    <!-- schedule end -->
 
-<!-- footer start -->
+    <div style="height: 80px"></div>
+
+    <!-- content start -->
+
+    <div class="wel-container">
+      <div class="left">
+        <h1 class="welcome">WELCOME</h1>
+        <h2 class="hotel-name">Orchid Hotel</h2>
+
+        <p class="w-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugit
+          nihil omnis facere alias architecto nulla ullam, nisi quia veritatis
+          modi est, magnam voluptatum dolore sit mollitia a aut incidunt! Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem
+          quasi vitae, eius id minima reiciendis quis. Adipisci quidem vel,
+          accusamus, quas animi ab illo fugit sint non quisquam magni!
+        </p>
+
+        <button class="btn-about">About Us</button>
+      </div>
+      <div class="right">
+        <img src="./images/package-img1.jpg" alt="" />
+      </div>
+    </div>
+    <!-- content end -->
+
+    <!-- facility start -->
+
+    <div class="facility-heading">
+      <h1 class="back-Name">Orchid'</h1>
+      <h2 class="facility-head">Facility</h2>
+    </div>
+    <div class="facility">
+      <div class="food-drink">
+        <img src="./images/f-d.png" alt="" />
+        <h5>Food&Drink</h5>
+        <p class="facility-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          nisi esse cumque distinctio voluptate ipsa alias illo fugiat.
+        </p>
+      </div>
+      <div class="outdoor-dining">
+        <img src="./images/outdoor-dining.png" alt="" />
+        <h5>Outdoor Dining</h5>
+        <p class="facility-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          nisi esse cumque distinctio voluptate ipsa alias illo fugiat.
+        </p>
+      </div>
+
+      <div class="playground">
+        <img src="./images/playground.png" alt="" />
+        <h5>Playground</h5>
+        <p class="facility-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          nisi esse cumque distinctio voluptate ipsa alias illo fugiat.
+        </p>
+      </div>
+      <div class="park">
+        <img src="./images/park.png" alt="" />
+        <h5>Park</h5>
+        <p class="facility-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          nisi esse cumque distinctio voluptate ipsa alias illo fugiat.
+        </p>
+      </div>
+      <div class="swimming-pool">
+        <img src="./images/swimming.png" alt="" />
+        <h5>Swimming Pool</h5>
+        <p class="facility-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          nisi esse cumque distinctio voluptate ipsa alias illo fugiat.
+        </p>
+      </div>
+      <div class="gym">
+        <img src="./images/gym.png" alt="" />
+        <h5>GYM</h5>
+        <p class="facility-p">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+          nisi esse cumque distinctio voluptate ipsa alias illo fugiat.
+        </p>
+      </div>
+    </div>
+    <!-- facility end -->
+
+    <div class="fascinating-heading">
+      <h1 class="back-name">Orchid'S</h1>
+      <h2 class="fascinating-head">Fascinating</h2>
+    </div>
+    <div class="wrapper">
+      <div class="leftContainer">
+        <div class="b-1 box" style="margin-top: 30px">
+          <div class="b-1_body" style="margin-left: 30%; margin-top: 15%">
+            <i class="fa-solid fa-display" style="padding: 20px 38px"></i>
+            <p style="padding-left: 25px">Free Cost</p>
+            <h6>No Booking fee</h6>
+          </div>
+        </div>
+
+        <div class="b-2 box" style="margin-top: 30px">
+          <div class="b-2_body">
+            <i class="fa-solid fa-dollar" style="padding: 20px 55px"></i>
+            <p style="padding-left: 33px">Free Cost</p>
+            <h6>Best Rate Genarate</h6>
+          </div>
+        </div>
+
+        <div class="b-3 box">
+          <div class="b-3_body" style="margin-left: 30%; margin-top: 15%">
+            <i class="fa-brands fa-resolving" style="padding: 20px 0 20px 35px"></i>
+            <p style="padding-left: 20px">Free Cost</p>
+            <h6 style="margin-left: -10px;">Reservation 24/7</h6>
+          </div>
+        </div>
+
+        <div class="b-4 box">
+          <div class="b-4_body" style="margin-left: 30%; margin-top: 15%">
+            <i class="fa-solid fa-wifi" style="padding: 20px 0px 20px 30px"></i>
+            <p style="padding-left: 20px">Free Cost</p>
+            <h6 style="margin-left: -10px;">High Speed Wi-Fi</h6>
+          </div>
+        </div>
+
+        <div class="b-5 box">
+          <div class="b-5_body" style="margin-left: 30%; margin-top: 15%">
+            <i class="fa-solid fa-mug-saucer" style="padding: 20px 35px"></i>
+            <p style="padding-left: 20px">Free Cost</p>
+            <h6>Free Breakfast</h6>
+          </div>
+        </div>
+
+        <div class="b-6 box">
+          <div class="b-6_body" style="margin-left: 30%; margin-top: 15%">
+            <i
+              class="fa-solid fa-person"
+              style="padding: 20px 45px; font-size: 40px"
+            ></i>
+            <p style="padding-left: 20px">Free Cost</p>
+            <h6>No Booking fee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="rightContainer">
+        <img src="./images/livingroom.avif" alt="" />
+      </div>
+    </div>
+
+    <!--message-accordion start  -->
+
+    <div class="message-accordion">
+      <div class="left-message">
+        <form action="">
+          <h4 class="send-message">Send Us Message</h4>
+          <input class="name-message" type="text" placeholder="Name" required />
+          <input
+            class="email-message"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="ph-message"
+            type="text"
+            placeholder="Phone-Number"
+            required
+          />
+          <textarea
+            class="message-area"
+            name=""
+            id=""
+            cols="40"
+            rows="0"
+            placeholder="Enter Message"
+          ></textarea>
+          <button class="btn-about" style="margin: 10px 15px">Send</button>
+        </form>
+      </div>
+      <div class="right-accordion">
+        <h4 class="send-message">Asked Question</h4>
+        <div class="accordion w-78 mx-3 mt-4" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Question 1.
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                numquam ?
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Question 2.
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                numquam ?
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Question 3.
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                numquam ?
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Question 4.
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                numquam ?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- message-accordion end -->
+
+    <!-- review start -->
+
+    <div class="review-head">
+      <h1 class="review">Review</h1>
+      <h2 class="review-writer">Customer</h2>
+    </div>
+
+    <div class="review-card-container">
+      <!-- Si Thu Myint Soe -->
+      <div class="card top">
+        <img src="./images//S_K.jpg" alt="" />
+        <div class="card-body">
+          <h3></h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <p class="feedback">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt
+            consequatur dolorum mollitia iste dolor commodi.
+          </p>
+        </div>
+
+        <div class="card-icon">
+          <a href=""
+            ><i
+              class="fa-brands fa-fw fa-facebook icon"
+              style="padding-right: 30px"
+            ></i
+          ></a>
+          <a href=""><i class="fa-brands fa-fw fa-instagram icon ig"></i></a>
+          <a href=""
+            ><i
+              class="fa-brands fa-fw fa-twitter icon"
+              style="padding-left: 12px"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <!-- Aung Thaw -->
+      <div class="card top">
+        <img src="./images//S_K.jpg" alt="" />
+        <div class="card-body">
+          <h3>Aung Thaw</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <p class="feedback">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt
+            consequatur dolorum mollitia iste dolor commodi.
+          </p>
+        </div>
+
+        <div class="card-icon">
+          <a href=""
+            ><i
+              class="fa-brands fa-fw fa-facebook icon"
+              style="padding-right: 30px"
+            ></i
+          ></a>
+          <a href=""><i class="fa-brands fa-fw fa-instagram icon ig"></i></a>
+          <a href=""
+            ><i
+              class="fa-brands fa-fw fa-twitter icon"
+              style="padding-left: 12px"
+            ></i
+          ></a>
+        </div>
+      </div>
+      <!-- Ye Yint Zaw Oo -->
+      <div class="card top">
+        <img src="./images//S_K.jpg" alt="" />
+        <div class="card-body">
+          <h3>Ye Yint Zaw Oo</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <p class="feedback">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt
+            consequatur dolorum mollitia iste dolor commodi.
+          </p>
+        </div>
+
+        <div class="card-icon">
+          <a href=""
+            ><i
+              class="fa-brands fa-fw fa-facebook icon"
+              style="padding-right: 30px"
+            ></i
+          ></a>
+          <a href=""><i class="fa-brands fa-fw fa-instagram icon ig"></i></a>
+          <a href=""
+            ><i
+              class="fa-brands fa-fw fa-twitter icon"
+              style="padding-left: 12px"
+            ></i
+          ></a>
+        </div>
+      </div>
+
+      <a href="./Review.html"><button class="btn-review">More Review</button></a
+      >
+    </div>
+    <!--review end  -->
+
+    <!-- content end -->
+
+    <!-- footer start -->
     <section class="footer">
       <div class="footer-content">
-        <img class="footer-logo" src="./images/logo1.png" alt="">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae possimus.</p>
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
 
         <div class="icons">
           <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
-          <a href="#"><i class="fa-brands fa-fw  fa-instagram icon"></i></a>
-          <a href="#"><i class="fa-brands fa-fw  fa-linkedin icon"></i></a>
-          <a href="#"><i class="fa-brands fa-fw  fa-twitter icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
         </div>
       </div>
       <div class="footer-content">
@@ -529,7 +1038,6 @@
         <li><a href="">Our Work</a></li>
         <li><a href="">services</a></li>
         <li><a href="">FAQ</a></li>
-        
       </div>
 
       <div class="footer-content">
@@ -537,12 +1045,26 @@
         <li><a href="">About Us</a></li>
         <li><a href="">Menu</a></li>
         <li><a href="">Contact</a></li>
-       
       </div>
     </section>
     <!-- footer end -->
 
+    <script>
+      ScrollReveal().reveal(".facility-heading", { duration: 2000 });
+      ScrollReveal().reveal(".review-head", { duration: 2000 });
+      ScrollReveal().reveal(".facility", { duration: 2000 });
+      ScrollReveal().reveal(".wel-container", { duration: 2000 });
+      ScrollReveal().reveal(".message-accordion", { duration: 2000 });
+      ScrollReveal().reveal(".card", { duration: 1000 });
+      ScrollReveal().reveal(".wrapper", { duration: 1000 });
+      ScrollReveal().reveal(".rightContainer", { duration: 1000 });
+      ScrollReveal().reveal(".b-1", { duration: 1000 });
+      ScrollReveal().reveal(".b-2", { duration: 1000 });
+      ScrollReveal().reveal(".b-3", { duration: 1000 });
+      ScrollReveal().reveal(".b-4", { duration: 1000 });
+      ScrollReveal().reveal(".b-5", { duration: 1000 });
+      ScrollReveal().reveal(".b-6", { duration: 1000 });
+    </script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
   </body>
 </html>

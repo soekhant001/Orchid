@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Link</title>
+    <style type="text/css">
+
+      		@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+      		*{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          text-decoration: none !important;
+          list-style: none;
+      }
+
+
+      h1,h2,h3{
+          font-size: 25px ;
+      }
+
+
+
+      img{
+          width: 100%;
+
+      }
+
+
+      header{
+          position: fixed;
+          top: 0;
+          width: 100%;
+          height: 76px;
+          background-color: #f8f8f8;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 10%;
+          margin: 0 auto;
+          z-index: 10000;
+      }
+
+      .logo{
+          position: relative;
+          width: 130px;
+          top: 4px;
+          padding-bottom: 18px;
+          margin-left: 40px;
+
+      }
+
+
+      .nav-bar ul{
+          display: flex;
+          position: relative;
+      }
+
+      nav ul li a{
+          position: relative;
+         display: block;
+         font-weight: 500 ;
+         padding: 8px 20px;
+         transition: 0.2x;
+         border-radius: 30px;
+         color: #000;
+
+      }
+
+      nav ul li .sign:hover{
+          background-color: rgb(222, 226, 231);
+          border-radius: 30px;
+      }
+
+
+
+      .sign,.bookNow{
+          position: relative;
+          font-size: 17px;
+          margin-right: 80px;
+
+      }
+
+
+      .bookNow{
+          background-color: rgba(210, 199, 250, 0.782);
+      }
+
+      nav ul li .bookNow:hover{
+          background-color: rgba(158, 131, 255, 0.968);
+      }
+
+      .nav-list-container{
+          position: fixed;
+          top:75px;
+          width: 100%;
+          background-color: #f8f8f8;
+          z-index: 1000;
+
+      }
+
+      .nav-list-container .navList{
+          display: grid;
+          column-gap: 50px;
+          grid-template-columns: auto auto auto auto auto auto;
+          width: 80%;
+          margin: 0 auto 20px;
+      }
+
+      .navList
+      {
+
+          background-color: rgba(210, 199, 250, 0.782);
+          height: 48px;
+          border-radius: 8px ;
+      }
+
+      .navList li{
+
+          text-align: center;
+          padding: 13px 0px 20px;
+      }
+
+      .navList li a{
+          position: relative;
+          color: #000;
+          font-size: 17px;
+      }
+
+
+      .navList li a:after{
+          content: "";
+          position: absolute;
+          background-color: #000;
+          height: 3px;
+          width: 0;
+          left: 0;
+          color: #000;
+          bottom: -10px;
+          transition: 0.5s;
+
+      }
+
+      .navList li a:hover:after{
+          width: 100%;
+      }
+
+
+      .footer-logo{
+          width: 100px;
+          padding-bottom: 20px;
+      }
+
+      section{
+          padding: 80px 13% 70px;
+      }
+
+      .footer{
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+          gap: 3.5rem;
+          position: relative;
+           left: 0;
+          right: 0;
+          bottom: 0;
+          background-color:  #f8f8f8;
+          width: 100%;
+          z-index: 1000;
+          margin-top: 80px;
+
+      }
+
+      .footer-content h4{
+          color: #000;
+          margin-bottom: 1.5rem;
+          font-size: 20px;
+      }
+
+      .footer-content li{
+          margin-bottom: 16px;
+      }
+
+      .footer-content li a{
+          display: block;
+          color: #000;
+          font-size: 15px;
+          font-weight: 400px;
+          transition: 0.6s;
+
+
+      }
+
+      .footer-content li a:hover{
+          transform:  translateX(-6px);
+      }
+
+      .footer-content p{
+          font-size: 16px;
+          line-height: 25px;
+          margin: 20px 0;
+          padding-bottom: 20px;
+      }
+
+      .icons a{
+          font-size: 20px;
+          color: #000;
+          margin-right: 17px;
+          transition: 0.5s;
+      }
+
+      .icons a:hover{
+          transform: translateY(-5px);
+          display: inline-block;
+      }
+      #water{
+      	padding-top: 150px;
+      	width: 80%;
+      	margin: 0 10%;
+      }
+      		*{
+      			padding: 0;
+      			margin: 0;
+      		}
+      		body{
+      			margin: 10px;
+      		}
+      		#icons{
+      			background-color: whitesmoke;
+      			width:100%;
+      			height: 200px;
+      			display: flex;
+      		}
+      		#f{
+      			color:red;
+      			margin-right: 10px:
+      		}
+      		a{
+      			color:red;
+      		}
+      		a:focus{
+      			color:blue;
+      		}
+      		h1{
+      			color:red;
+      			font-weight: bold;
+      		}
+      		#span{
+      			background-color: rgba(210,199,250,0.782);
+      		color:black;
+      			width: 20%;
+      			height:60px;
+      			padding: 20px 10px;
+      			margin:50px 500px ;
+      			text-align: center;
+      		}
+      		#span:hover{
+      			background-color:rgba(158,131,255,0.968);
+      		}
+      		#span:focus{
+      			color:red;
+      		}
+      		#spice{
+      			width: 300px;
+      			height: 50px;
+      			float: left;
+      			background-color: skyblue;
+      			padding: 20px 10px;
+      			align-items: center;
+      		}
+      		#menu{
+      			width: 300px;
+      			height: 50px;
+      			float: left;
+      			margin-left: 20px;
+      			padding: 20px 20px;
+
+      			background-color: skyblue;
+      			align-items: center;
+      		}
+      		.menu{
+       display: flex;
+       padding: 10px;
+       margin: 10px;
+      }
+      .menu .menu1,.menu2{
+       background-color: #f4f4f4;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       border: 5px solid #f4f4f4;
+          width: 300px;
+          height: 150px;
+          padding: 10px;
+           margin-right: 20px;
+         /* display: grid;
+          place-items: center;*/
+      }
+      .review .cards{
+        display: flex;
+          justify-content: center;
+          padding: 10px;
+          margin: 20px;
+      }
+
+      .card1,.card2,.card3{
+       background-color: #f4f4f4;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       border: 5px solid #f4f4f4;
+          width: 300px;
+          height: auto;
+          padding: 10px;
+          margin-top: 10px;
+       margin-left: 60px;
+
+      }
+      .cards .date{
+       padding-top:10px;
+       padding-bottom: 10px;
+      }
+      .cards h3,.sign{
+       padding-top: 10px;
+      }
+      .cards .sign{
+       font-weight: bolder;
+      }
+
+      #icons .pic1,.pic2,.pic3,.pic4,.pic5{
+      	font-size: 70px;
+      	border: 2px solid red;
+      	padding:20px 60px;
+      	border: none;
+      }
+      #icons .icon-label{
+      	font-size: 15px;
+
+      	width:100px;
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logo1.png" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="./takethis/new.html">Room</a></li>
+        </div>
+        <div class="event">
+          <li><a href="./celebration1.html">Event</a></li>
+        </div>
+        <div class="restaurants">
+          <li><a href="./fooddrink.html">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="./contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+    <div id="water">
+      <img src="./CES_Images/img2.jpg" width="100%" height="500px" />
+      <i id="f" class="fa-solid fa-utensils"></i>
+      <span>Cantonese Sichuan</span><br /><br />
+      <h1>Si Chuan Dou Hua Restaurant</h1>
+      <br />
+
+      <div id="icons">
+        <div class="pic1">
+          <i id="a" class="fa-solid fa-clock"></i><br />
+          <p class="icon-label">6.00am to 9.00pm</p>
+        </div>
+        <div class="pic2">
+          <i id="b" class="fa-solid fa-location-dot"></i><br />
+          <p class="icon-label">Ground Level</p>
+        </div>
+        <div class="pic3">
+          <i id="c" class="fa-solid fa-shirt"></i><br />
+          <p class="icon-label">Relaxed and Casual</p>
+        </div>
+        <div class="pic4">
+          <i id="d" class="fa-solid fa-chair"></i><br />
+          <p class="icon-label">150 Guests</p>
+        </div>
+        <div class="pic5">
+          <i id="e" class="fa-solid fa-phone-volume"></i><br />
+          <p class="icon-label"><a href="#">+ 951 8 250 388</a></p>
+        </div>
+      </div>
+      <br /><br />
+      <p>
+        Serving up a smorgasbord of local and international flavours, Spice
+        Brasserie is the best Myanmar restaurant in Yangon, ideal for both
+        business and leisure. Indulge in a daily buffet and satisfy your palate
+        with gourmet delights. Be sure to try the Special of the Day featuring
+        innovative creations by skilful chefs. Both indoor and outdoor seating
+        areas are available.
+      </p>
+      <br /><br />
+
+      <h2>Contact Us</h2>
+      <br />
+      <p>Email-<a href="Orchid Hotel@gmail.com">Orchid Hotel@gmail.com</a></p>
+      <div id="span">
+        <span>MAKE A RESERVATION</span>
+      </div>
+      <p>Our Menus</p>
+
+      <div class="menu">
+        <div class="menu1">
+          <p>Spice Brasserie À La Carte Menu</p>
+          <div class="pdf">
+            <i class="fa-solid fa-download"></i>
+            <a href="#">Download PDF</a>
+          </div>
+        </div>
+        <div class="menu2">
+          <p>Beverge Menu</p>
+          <div class="pdf">
+            <i class="fa-solid fa-download"></i>
+            <a href="#">Download PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="head">
+          <h2>Guest Reviews</h2>
+        </div>
+        <div class="cards">
+          <div class="card1">
+            <div class="description">
+              <h3>Orchid hotel & resort</h3>
+              <p class="date">January 2013</p>
+              <p class="word">
+                The Hot Chicken is some of the best fried chicken I've ever the
+                shrimp and crispy grits...interesting, wouldn't order again
+                tho..
+              </p>
+              <p class="sign">Nwe Ni Hlaing</p>
+            </div>
+          </div>
+
+          <div class="card2">
+            <div class="description">
+              <h3>Orchid hotel & resort</h3>
+              <p class="date">March 2016</p>
+              <p class="word">
+                This part of Bed Stuy deserves a high end restaurant and this
+                place comes through.
+              </p>
+              <br />
+              <p class="sign">Myat Kay Zin Thant</p>
+            </div>
+          </div>
+
+          <div class="card3">
+            <div class="description">
+              <h3>Orchid hotel & resort</h3>
+              <p class="date">December 2019</p>
+              <p class="word">
+                The staff are very friendly and patient. They provide full
+                service. The food is fresh and full of satisfaction.
+              </p>
+              <p class="sign">Kyi Phyu Thwe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+    </section>
+  </body>
+</html>

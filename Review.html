@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Review</title>
+	
+	<link rel="stylesheet" type="text/css" href="./libs/fontawesomepro/css/all.min.css">
+	<style type="text/css">
+		@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	 text-decoration: none !important;
+    list-style: none;
+}
+
+h1,h2,h3{
+    font-size: 25px ;
+}
+
+
+
+img{
+    width: 100%; 
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: 0 auto; 
+    z-index: 10000;
+}
+
+.logo{
+    position: relative;
+    width: 130px;
+    top: 4px;
+    padding-bottom: 18px;
+    margin-left: 40px;
+
+}
+
+
+.nav-bar ul{
+    display: flex;
+    position: relative;
+}
+
+nav ul li a{
+    position: relative;
+   display: block;
+   font-weight: 500 ;
+   padding: 8px 20px;
+   transition: 0.2x;
+   border-radius: 30px;
+   color: #000;
+
+}
+
+nav ul li .sign:hover{
+    background-color: rgb(222, 226, 231);
+    border-radius: 30px;
+}
+
+
+
+.sign,.bookNow{
+    position: relative;
+    font-size: 17px;
+    margin-right: 80px;
+    
+}
+
+
+.bookNow{
+    background-color: rgba(210, 199, 250, 0.782);  
+}
+
+nav ul li .bookNow:hover{
+    background-color: rgba(158, 131, 255, 0.968);
+}
+
+.nav-list-container{
+    position: fixed;
+    top:75px;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+   
+}
+
+.nav-list-container .navList{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.navList
+{
+    
+    background-color: rgba(210, 199, 250, 0.782);
+    height: 48px;
+    border-radius: 8px ;
+}
+
+.navList li{
+   
+    text-align: center;
+    padding: 13px 0px 20px;
+}
+
+.navList li a{
+    position: relative;
+    color: #000;
+    font-size: 17px;
+}
+
+
+.navList li a:after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -10px;
+    transition: 0.5s;
+   
+}
+
+.navList li a:hover:after{
+    width: 100%;
+}
+
+
+.footer-logo{
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+section{
+    padding: 80px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 3.5rem;
+    position: relative;
+     left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color:  #f8f8f8;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 80px;
+    
+}
+
+.footer-content h4{
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+}
+
+.footer-content li a{
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400px;
+    transition: 0.6s;
+    
+
+}
+
+.footer-content li a:hover{
+    transform:  translateX(-6px);
+}
+
+.footer-content p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.icons a{
+    font-size: 20px;
+    color: #000;
+    margin-right: 17px;
+    transition: 0.5s;
+}
+
+.icons a:hover{
+    transform: translateY(-5px);
+    display: inline-block;
+}
+
+
+.container{
+	margin-left: 10%;
+	width: 80%;
+	/*background-color: gray;*/
+	padding: 10px;
+	margin-top: 50px;
+
+}
+.container .head h2{
+float: left;
+font-size: 30px;
+
+}
+.container .head .date{
+	/*padding-bottom: 10px;*/
+margin-left: 75%;
+border: 2px solid blue;
+box-shadow: 0 2px 15px rgba(0, 0, 0, 1.0);
+background-color: #f4f4f4;
+border: none;
+align-items: center;
+
+padding: 5px 0;
+padding-left: 30px;
+
+}
+
+.description{
+	display: flex;
+	padding-top: 30px;
+	padding-left:50px ;
+	margin: 20px;
+
+
+}
+.description .box1,.box2,.box3{
+	
+
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+     margin-right: 20px;
+      
+}
+.description .box1,.box2{
+		line-height: 30px;
+}
+.description .box2 .p{
+	float: left;
+
+}
+.description .box2 .stars{
+	color: yellow;
+}
+.description .box2 .stars .fa-regular{
+	color:#ada795 ;
+}
+.description .box3 .kk{
+	color: red;
+
+}
+.reviews .review1,.review2,.review3{
+	padding: 10px;
+	margin: 10px;
+	margin-bottom: 20px;
+}
+.reviews img{
+	float: left;
+	width: 100px;
+	height: 100px;	
+	padding: 10px;
+	margin: 10px;
+}
+.reviews .name-data {
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	
+	
+
+}
+.reviews .rate{
+	padding: 10px;
+	margin: 10px;
+	/*clear: left;*/
+}
+
+.reviews .name-data .name{
+	font-weight: bold;
+	
+}
+.reviews .rate .stars{
+	color: yellow;
+	margin-right: 10px;
+	float: left;
+	padding-right: 10px;
+}
+.reviews .rate .stars .fa-regular{
+	color: #ada795;
+}
+/*.reviews .rate p{
+	padding-top: 10px;
+}*/
+
+.reviews .rate .commet{
+
+text-align: right;
+padding: 0 10px;
+}
+.reviews .rate .fa-heart{
+	color: red;
+
+}
+.reviews .rate .commet .public_commet{
+	padding: 30px;
+}
+
+.reviews .commet{
+	margin-top: 30px;
+}
+
+
+
+	</style>
+</head>
+<body>
+
+	<header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./TPS_Images/logo1.jpg" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="./takethis/new.html">Room</a></li>
+        </div>
+        <div class="event">
+          <li><a href="./celebration1.html">Event</a></li>
+        </div>
+        <div class="restaurants">
+          <li><a href="./fooddrink.html">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="./contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+
+
+
+	<div class="container">
+		<div class="head">
+				<h2>Reviews</h2>
+				<p class="date">March 2022 - September 2023</p>
+		</div>
+				
+		<div class="description">
+				<div class="box1">
+					<p>Total Reviews</p>
+					<p  style="font-size: 20px;"><strong>10.0K</strong></p>
+					<p>Growth in view in this year</p>
+				</div>
+
+				<div class="box2">
+					<p>Average Rating</p>
+					<p style="font-size: 20px;" class="p"><strong>4.0</strong> 
+						<div class="stars">
+						<i class="fa-solid fas fa-star"></i>
+						<i class="fa-solid fas fa-star"></i>
+						<i class="fa-solid fas fa-star"></i>
+						<i class="fa-solid fas fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						</div>
+					</p>
+					<p>Average rating in this year</p>
+				</div>
+
+
+				<div class="box3">
+					<meter class="kk" value="14417" min="0" max="14417"></meter>2.0k<br>
+
+					<meter class="2" value="7000" min="0" max="14417"></meter>1.0k<br>
+
+					<meter class="3" value="3800" min="0" max="14417"></meter>500<br>
+
+					<meter class="4" value="2062" min="0" max="14417"></meter>200<br>
+
+					<meter class="5" value="1042" min="0" max="14417"></meter>0%<br>
+
+				</div>
+        </div>
+        <hr>
+       <div class="reviews">
+       	   <div class="review1">
+       	   	<div class="img">
+       	   		<img src="./TPS_Images/profile1.jpg" alt="image1.jpg">
+       	   	</div>
+       	   	<div class="name-data">
+       	   		<p class="name">Mr.James</p>
+       	   		<p>Total spend : $200</p>
+       	   		<p>Total Review :14</p>
+       	   	</div>
+            <br class="clear">
+       	   	<div class="rate">
+       	   		<div class="first">
+       	   		<div class="stars">
+       	   		<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				</div>
+				<span>21-7-2023</span>
+				</div>
+				<p>Always my first choice for my stays in Pyin_Oo_Lwin.Amazing hotel , perfect location nice quality rooms with amazing views to lake . Service is perfect.  Thank you</p>
+				<div style="clear: both;"></div>
+				<div class="commet">
+					<span class="public_commet">Public Commet</span>
+					<span>Direct Message</span>
+					<i class="fa-solid fa-heart"></i>
+				</div>
+       	   	</div>
+       	   </div>
+
+
+       	   
+
+
+
+       	   <div class="review2">
+       	   	<div class="img">
+       	   		<img src="./TPS_Images/profile2.jpg" alt="image1.jpg">
+       	   	</div>
+       	   	<div class="name-data">
+       	   		<p class="name">Morisaki Win</p>
+       	   		<p>Total spend : $200</p>
+       	   		<p>Total Review :14</p>
+       	   	</div>
+       	   	<div class="rate">
+       	   		<div class="first">
+       	   		<div class="stars">
+       	   		<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				</div>
+				<span>25-8-2023</span>
+			    </div>
+				<p>Excellent hotel with best facilities and warmest services that I have ever seen before... Enjoy the best time at Lilawadee Spa in ORCHID Hotel. There is also a short trip plan to Pyin_Oo_Lwin, Pyae Chit Pagoda and Natural Craves with motorcycles. We had a amazing view of fireworks and hot air ballon from Pyin_Oo_Lwin Tasaungdine Hot Air Balloon Festival</p>
+				<div class="commet">
+					<span class="public_commet">Public Commet</span>
+					<span>Direct Message</span>
+					<i class="fa-regular fa-heart"></i>
+				</div>
+       	   	</div>
+       	   </div>
+
+
+       	    <div class="review3">
+       	   	<div class="img">
+       	   		<img src="./TPS_Images/profile3.jpg" alt="image3.jpg">
+       	   	</div>
+       	   	<div class="name-data">
+       	   		<p class="name">Mary</p>
+       	   		<p>Total spend : $300</p>
+       	   		<p>Total Review :14</p>
+       	   	</div>
+
+       	   	<div class="rate">
+       	   		<div class="first">
+       	   		<div class="stars">
+       	   		<i class="fa-solid fas fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				</div>
+				<span>5-9-2023</span>
+				</div>
+				<p>The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown</p>
+				<div class="commet">
+					<span class="public_commet">Public Commet</span>
+					<span>Direct Message</span>
+					<i class="fa-solid fa-heart"></i>
+				</div>
+       	   	</div>
+       	   </div>
+
+        	<div class="review4">
+       	   	<div class="img">
+       	   		<img src="./TPS_Images/profile4.jpg" alt="image4.jpg">
+       	   	</div>
+       	   	<div class="name-data">
+       	   		<p class="name">Mr.Pu Thu</p>
+       	   		<p>Total spend : $400</p>
+       	   		<p>Total Review :14</p>
+       	   	</div>
+            <br class="clear">
+       	   	<div class="rate">
+       	   		<div class="first">
+       	   		<div class="stars">
+       	   		<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				</div>
+				<span>19-8-2023</span>
+				</div>
+				<p>They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn’t wanna wait. So this was a big plus. The sevice was exceptional as well. Would definitely send a friend there.</p>
+				<div style="clear: both;"></div>
+				<div class="commet">
+					<span class="public_commet">Public Commet</span>
+					<span>Direct Message</span>
+					<i class="fa-solid fa-heart"></i>
+				</div>
+       	   	</div>
+       	   </div>
+
+
+       	   
+
+
+
+       	   <div class="review5">
+       	   	<div class="img">
+       	   		<img src="./TPS_Images/profile5.jpg" alt="image5.jpg">
+       	   	</div>
+       	   	<div class="name-data">
+       	   		<p class="name">Chole</p>
+       	   		<p>Total spend : $100</p>
+       	   		<p>Total Review :14</p>
+       	   	</div>
+       	   	<div class="rate">
+       	   		<div class="first">
+       	   		<div class="stars">
+       	   		<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-solid fas fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				</div>
+				<span>14-9-2023</span>
+			    </div>
+				<p> This is the perfect hotel for a weekend getaway in. The downtown area on Main Street is a best kept secret and the offers everything you need if you don’t feel like venturing out.</p>
+				<div class="commet">
+					<span class="public_commet">Public Commet</span>
+					<span>Direct Message</span>
+					<i class="fa-regular fa-heart"></i>
+				</div>
+       	   	</div>
+       	   </div>
+
+
+       	    <div class="review6">
+       	   	<div class="img">
+       	   		<img src="./TPS_Images/profile6.jpg" alt="image6.jpg">
+       	   	</div>
+       	   	<div class="name-data">
+       	   		<p class="name">Mr.Tin</p>
+       	   		<p>Total spend : $200</p>
+       	   		<p>Total Review :14</p>
+       	   	</div>
+
+       	   	<div class="rate">
+       	   		<div class="first">
+       	   		<div class="stars">
+       	   		<i class="fa-solid fas fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				<i class="fa-regular fa-star"></i>
+				</div>
+				<span>24-9-2023</span>
+				</div>
+				<p>Room is clean and very good. The accomodation is excelent. The staff is very polite and have a good english conversation especially mr steve. Food taste is very good. I recommended to have staycation in lotte hotel</p>
+				<div class="commet">
+					<span class="public_commet">Public Commet</span>
+					<span>Direct Message</span>
+					<i class="fa-solid fa-heart"></i>
+				</div>
+       	   	</div>
+       	   </div>
+
+
+       	   
+
+
+       	   
+
+
+
+
+ 
+       	   
+
+       	
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+				
+	</div>
+
+	<section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+    </section>
+
+</body>
+</html>

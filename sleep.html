@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<link href="sleep.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+h1,h2,h3{
+    font-size: 25px ;
+}
+
+
+
+img{
+    width: 100%; 
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: 0 auto; 
+    z-index: 10000;
+}
+
+.logo{
+    position: relative;
+    width: 130px;
+    top: 4px;
+    padding-bottom: 18px;
+    margin-left: 40px;
+
+}
+
+
+.nav-bar ul{
+    display: flex;
+    position: relative;
+}
+
+nav ul li a{
+    position: relative;
+   display: block;
+   font-weight: 500 ;
+   padding: 8px 20px;
+   transition: 0.2x;
+   border-radius: 30px;
+   color: #000;
+
+}
+
+nav ul li .sign:hover{
+    background-color: rgb(222, 226, 231);
+    border-radius: 30px;
+}
+
+
+
+.sign,.bookNow{
+    position: relative;
+    font-size: 17px;
+    margin-right: 80px;
+    
+}
+
+
+.bookNow{
+    background-color: rgba(210, 199, 250, 0.782);  
+}
+
+nav ul li .bookNow:hover{
+    background-color: rgba(158, 131, 255, 0.968);
+}
+
+.nav-list-container{
+    position: fixed;
+    top:75px;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+   
+}
+
+.nav-list-container .navList{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.navList
+{
+    
+    background-color: rgba(210, 199, 250, 0.782);
+    height: 48px;
+    border-radius: 8px ;
+}
+
+.navList li{
+   
+    text-align: center;
+    padding: 13px 0px 20px;
+}
+
+.navList li a{
+    position: relative;
+    color: #000;
+    font-size: 17px;
+}
+
+
+.navList li a:after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -10px;
+    transition: 0.5s;
+   
+}
+
+.navList li a:hover:after{
+    width: 100%;
+}
+
+
+.footer-logo{
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+section{
+    padding: 80px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 3.5rem;
+    position: relative;
+     left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color:#f8f8f8;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 80px;
+    
+}
+
+.footer-content h4{
+    color:#000;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+}
+
+.footer-content li a{
+    display: block;
+    color:#000;
+    font-size: 15px;
+    font-weight: 400px;
+    transition: 0.6s;
+    
+
+}
+
+.footer-content li a:hover{
+    transform:  translateX(-6px);
+}
+
+.footer-content p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.icons a{
+    font-size: 20px;
+    color: #000;
+    margin-right: 17px;
+    transition: 0.5s;
+}
+
+.icons a:hover{
+    transform: translateY(-5px);
+    display: inline-block;
+}
+	</style>
+</head>
+<body>
+<header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logo1.png" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="./takethis/new.html">Room</a></li>
+        </div>
+        <div class="event">
+          <li><a href="./celebration1.html">Event</a></li>
+        </div>
+        <div class="restaurants">
+          <li><a href="">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+
+<div class="w3">
+<h1 class="h1">Discover Our Rooms and Suites </h1>
+<p class="para">Experience a fusion of modern elegance and old-world charms within the refined spaces of our hotel in Yangon, Myanmar. Complemented by signature PARKROYAL hospitality, our rooms and suites feature stylish décor, plush furnishings and amenities.</p>
+<br>
+Find out more <a href="Hotel-policies.html" class="a">Hotel Policies</a>
+
+<h2 class="h2">Rooms and Suites</h2>
+
+
+<div class="cards">
+
+<div class="card1">
+  <div class="card_img">
+<img src="./LLT_Images/luxury_room.jpg" class="img1">
+  </div>
+<div class="card_head">
+  <i class="fa-solid fa-star"></i>
+   <h3>LUXURY ROOM</h3>
+   <p><strong>Room Size:100sqm</strong></p>
+</div>
+
+<div class="card_p">
+<p>Unwind in the comforts of our <strong>Luxury Room</strong>,which features large bay windows with view of city and pool
+<br>
+Offer delightful city and pool view as well as a large work  area<br>
+Idea for relexing or working  our Luxury Room  features great view,confortable ambience and a large executive area<br>
+</p>
+</div>
+
+<div class="card_botton">
+  <div class="card_button"> 
+<a href="book.html" class="book">BOOK NOW</a>
+</div>
+<div class="card_price">
+<p class="p1">
+<strong><i class="fa-solid fa-sack-dollar"></i>Price starting:$95.09</strong><br>
+<strong><i class="fa-solid fa-gift"></i>Member save up:$85.74</strong><br>
+</p>
+</ul><br></p>
+</div>
+
+</div>
+
+<div class="card2">
+  <div class="card_img">
+<img src="./LLT_Images/luxury_room.jpg" class="img1">
+  </div>
+<div class="card_head">
+  <i class="fa-solid fa-star"></i>
+   <h3>LUXURY ROOM</h3>
+   <p><strong>Room Size:100sqm</strong></p>
+</div>
+
+<div class="card_p">
+<p>Unwind in the comforts of our <strong>Luxury Room</strong>,which features large bay windows with view of city and pool
+<br>
+Offer delightful city and pool view as well as a large work  area<br>
+Idea for relexing or working  our Luxury Room  features great view,confortable ambience and a large executive area<br>
+</p>
+</div>
+
+<div class="card_botton">
+  <div class="card_button"> 
+<a href="book.html" class="book">BOOK NOW</a>
+</div>
+<div class="card_price">
+<p class="p1">
+<strong><i class="fa-solid fa-sack-dollar"></i>Price starting:$95.09</strong><br>
+<strong><i class="fa-solid fa-gift"></i>Member save up:$85.74</strong><br>
+</p>
+</ul><br></p>
+</div>
+
+</div>
+
+
+<div class="card3">
+  <div class="card_img">
+<img src="./LLT_Images/luxury_room.jpg" class="img1">
+  </div>
+<div class="card_head">
+  <i class="fa-solid fa-star"></i>
+   <h3>LUXURY ROOM</h3>
+   <p><strong>Room Size:100sqm</strong></p>
+</div>
+
+<div class="card_p">
+<p>Unwind in the comforts of our <strong>Luxury Room</strong>,which features large bay windows with view of city and pool
+<br>
+Offer delightful city and pool view as well as a large work  area<br>
+Idea for relexing or working  our Luxury Room  features great view,confortable ambience and a large executive area<br>
+</p>
+</div>
+
+<div class="card_botton">
+  <div class="card_button"> 
+<a href="book.html" class="book">BOOK NOW</a>
+</div>
+<div class="card_price">
+<p class="p1">
+<strong><i class="fa-solid fa-sack-dollar"></i>Price starting:$95.09</strong><br>
+<strong><i class="fa-solid fa-gift"></i>Member save up:$85.74</strong><br>
+</p>
+</ul><br></p>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+<div class="bottom">
+
+<div class="s4">
+
+<img src="./LLT_Images/budget_room.jpg" class="img4">
+<h3 class="bud"><i class="fa-solid fa-comments-dollar"></i>&nbsp &nbsp BUDGET ROOM</h3>
+<p><strong>Room Size:100sqm</strong></p>
+<p>Unwind in the comforts of our <strong>BUDGET Room</strong>,which features imenities for single who want to relax.
+<br>
+Best for those who want to relax and be alone<br>
+Idea for relexing or a person travelling alone  our BUDGET Room  features give you full satisfied<br>
+<a href="book.html" class="book">BOOK NOW</a>
+<p class="p4">
+<strong><i class="fa-solid fa-sack-dollar"></i>&nbsp&nbspPrice starting:$14.29</strong><br>
+<strong><i class="fa-solid fa-gift"></i>&nbsp&nbspMember save up:$9.53</strong><br>
+</p>
+</ul><br></p>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+<section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+    </section> 
+</body>
+</html>

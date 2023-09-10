@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="test.css">
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+        main{
+            margin-top: 170px;
+        }
+        img{
+    width: 100%; 
+    
+}
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+h1,h2,h3{
+    font-size: 25px ;
+} */
+
+
+/* main *{
+    margin: unset;
+    padding: unset;
+    box-sizing: unset;
+    text-decoration: unset;
+    list-style: unset;
+} */
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: 0 auto; 
+    z-index: 10000;
+}
+
+.logo{
+    position: relative;
+    width: 130px;
+    top: 4px;
+    padding-bottom: 18px;
+    margin-left: 40px;
+
+}
+
+
+.nav-bar ul{
+    display: flex;
+    position: relative;
+}
+
+nav ul li a{
+    position: relative;
+   display: block;
+   font-weight: 500 ;
+   padding: 8px 20px;
+   transition: 0.2x;
+   border-radius: 30px;
+   color: #000;
+
+}
+
+
+
+nav ul li .sign:hover{
+    background-color: rgba(210, 199, 250, 0.5);  
+   
+    border-radius: 30px;
+    
+}
+
+
+
+.sign,.bookNow{
+    position: relative;
+    font-size: 17px;
+    margin-right: 80px;
+    
+}
+
+
+.bookNow{
+    background-color: rgba(210, 199, 250, 0.782);  
+}
+
+nav ul li .bookNow:hover{
+    background-color: rgba(158, 131, 255, 0.968);
+}
+
+.nav-list-container{
+    position: fixed;
+    top:75px;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+   
+}
+
+.nav-list-container .navList{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.navList
+{
+    
+    background-color: rgba(210, 199, 250, 0.782);
+    height: 48px;
+    border-radius: 8px ;
+}
+
+.navList li{
+   
+    text-align: center;
+    padding: 13px 0px 20px;
+}
+
+.navList li a{
+    position: relative;
+    color: #000;
+    font-size: 17px;
+}
+
+
+.navList li a:after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -8px;
+    transition: 0.5s;
+   
+}
+.navList li a:hover:after{
+    width: 100%;
+}
+
+.event{
+    
+    margin-left: -70px;
+    position: relative;
+}
+
+.navList .event-btn{
+    /* display: inline-block; */
+    position: absolute;
+    top: 13px;
+    left: 100px;
+    border: none;
+    background-color: rgba(210, 199, 250, 0);  
+}
+
+.navList .event-btn:after{
+    content: "";
+    position: absolute;
+    color: #000;
+   background-color: black;
+   height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.navList .event-btn:hover:after{
+    width: 100%;
+}
+
+
+
+.navList .event-menu{
+    padding: 3px 10px ;
+    height: 130px;
+    width: 200px;
+    background-color: #f8f8f8dd;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+   
+}
+ 
+.navList .event-list{
+    text-align: center;
+    padding: 10px;
+   margin-top: 10px;
+    display: block;
+    border:2px solid #000;
+    color: black;
+}
+
+.event-list:hover{
+    background-color: rgba(210, 199, 250, 1);
+    border-color: rgba(210, 199, 250, 1);
+}
+
+.event-btn:focus+.event-menu{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+
+.footer-logo{
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+section{
+    padding: 80px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 3.5rem;
+    position: relative;
+     left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color:  #f8f8f8;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 80px;
+    height: 300px;
+   
+    
+}
+
+.footer-content h4{
+    color: #000;
+    padding-top:70px;
+    /* margin-bottom: 1.5rem; */
+    font-size: 20px;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+}
+
+.footer-content li a{
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400px;
+    transition: 0.6s;
+}
+
+.footer-content li a:hover{
+    transform:  translateX(-6px);
+}
+
+.footer-content p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.icons a{
+    font-size: 20px;
+    color: #000;
+    margin-right: 17px;
+    transition: 0.5s;
+}
+
+.icons a:hover{
+    transform: translateY(-5px);
+    display: inline-block;
+}
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <a href="./index.html"
+            ><img src="./images/logo1.png" alt="hotelLogo"
+          /></a>
+        </div>
+  
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li>
+              <div class="sign">
+                <a href="">
+                  <i class="fa-solid fa-user"></i>
+                  Sign In/Up and Save 10%
+                </a>
+              </div>
+            </li>
+  
+            <li>
+              <div class="bookNow">
+                <a href="">Book Now</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+  
+      <div class="nav-list-container">
+        <ul class="navList">
+          <div class="room">
+            <li><a href="">Room</a></li>
+          </div>
+          <div class="event">
+           <button class="event-btn">Event</button>
+            <div class="event-menu">
+              <a href="./meeting.html" class="event-list">Meeting</a>
+              <a href="./celebration1.html" class="event-list">Celebration</a>
+            </div>
+  
+          </div>
+          <div class="restaurants">
+            <li><a href="fooddrink.html" style="margin-left: -150px;">Restaurants</a></li>
+          </div>
+          <div class="s-f">
+            <li><a href="" style="margin-left: -50px;">Services & Facilities</a></li>
+          </div>
+          <div class="blog">
+            <li><a href="blog.html" style="margin-left: -25px;">Blog</a></li>
+          </div>
+          <div class="contact">
+            <li><a href="contact.html" style="margin-left: -25px;">Contact</a></li>
+          </div>
+        </ul>
+      </div>
+
+    <main id="parentContainer">
+        <div id="parentroomContainer">
+            <div class="child1">
+
+                <style>
+                    .zslidecontainer{
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 2.68fr 1.3fr;
+                        
+                        grid-gap: 10px;
+                    }
+                    .zslider1, .zslider2{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .zslider1 img, .zslider2 img{
+                        width: 100%;
+                    }
+                </style>
+
+                <div class="zslidecontainer">
+                    <div class="zslider1">
+                            <img src="images/room1.jpeg" alt="" >
+                    </div>
+
+                    <!-- uncessary but not sure why
+                         <style>
+                         .zslider2 .imgiconcontainer{
+                            width: 100%;
+                            
+                        }
+
+                        .zslider2 .imgiconcontainer {
+                            display: grid;
+                            grid-template-rows: repeat(1fr);
+                        }
+                        .zslider2 .imgiconcontainer img{
+                            width: 100%;
+                        } 
+                    </style> -->
+
+                    <div class="zslider2">
+
+                        <div class="imgiconcontainer">
+                            <img src="images/room3.jpeg" alt="" style="border-radius: 12px;">
+                            <img src="images/room3.jpeg" alt="" style="border-radius: 12px;">
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                    <div class="roominfo">
+                        <h2>Solo Serenity</h2>
+                        <p>City view</p>
+                        
+                        <i class="fa-solid fa-house"></i>
+                        <i>55 sq m</i>
+                         &nbsp;
+                         &nbsp;
+
+                        <i class="fa fa-city"></i>
+                        <i>City View</i>
+                         &nbsp; &nbsp;
+                         &nbsp; &nbsp;
+                        <i class="fa fa-users"></i>
+                        <i>Sleeps 3</i>
+                         &nbsp; &nbsp;
+                         &nbsp; &nbsp;
+                        <i class="fa fa-bed"></i>
+                        <i>1 King Bed</i>
+                         &nbsp; &nbsp;
+                         &nbsp; &nbsp;
+                         <i class="fa fa-cocktail"></i>
+                         <i>Bar</i>
+                          &nbsp; &nbsp;
+                          &nbsp; &nbsp;
+                          <i class="fa fa-parking"></i>
+                          <i>Parking</i>
+                           &nbsp; &nbsp;
+                           &nbsp; &nbsp;
+                           <i class="fa-solid fa-ban-smoking fa-lg"></i>
+                            <i>No smoking</i>
+                            &nbsp; &nbsp;
+                            &nbsp; &nbsp;
+
+
+                    </div>
+                    <br>
+                    <hr>
+                    
+                    <div class="roomdesc">
+                        <h2>Room Highlights</h2>
+                        
+                        <p>
+                            The "Solo Serenity" room is your personal heaven. This room is specificaly designed for your solitude and relaxation in mind, offering a cozy space to unwind.
+                            
+                        </p>
+                        <p>
+                            Your comfort and your way: enjoy a comfortable single bed with Premium bedding for a restful night's sleep. You will declare your own law at your room as you are
+                            special to us.
+                        </p>
+
+                        <p>
+                            Modern Amenities: Your room comes with all the modern conveniences you'd expect - a private bathroom, high speed WIFI, and a flat TV for your entertainment.
+                        </p>
+
+                        <p>Prime Location: Orchid hotel is centrally located, giving you easy access to the city's attractions, shopping districts</p>
+
+                        <p>
+                            Special Offers: Book your stay in the "Solo Serenity" room now and take advantage of an exclusive promotion. This is your chance to experience Your SOLO ESCAPE today!
+                        </p>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="roomserviceparentcontainer">
+                        <h2>Room Animanity</h2>
+                        <div class="roomservicecontainer">
+                            <div class="sect1">
+                                <ul class="none">
+                                    <li>
+                                        <i class="fa fa-shower" style="font-size: 20px;"></i> Bedroom
+                                        <ul>
+                                            <li>Bathrobes</li>
+                                            <li>Hair dryer</li>
+                                            <li>Private bathroom</li>
+                                            <li>Separate bathtub and shower</li>
+                                            <li>Slipper</li>
+                                            <li>Towels</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="sect2">
+                                <ul class="none">
+                                    <li>
+                                        <i class="fa fa-bed" style="font-size: 20px;"></i> Bedroom
+                                        <ul>
+                                            <li>Bed sheets</li>
+                                            <li>Blackout drapes/curtains</li>
+                                            <li>Climate Controlled air conditioning</li>
+                                            <li>Down duvet</li>
+                                            <li>Free cribs/infant beds</li>
+                                            <li>Premium bedding</li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sect3">
+                                <ul class="none">
+                                    <li>
+                                        <i class="fa fa-check" style="font-size: 20px;"></i> Entertainment
+                                        <ul>
+                                            <li>40-inch LCD TV</li>
+                                            <li>Digital channels</li>
+                                            <li>DVD player</li>
+                                            <li>Down duvet</li>
+                                            <li>Free newspaper</li>
+                                            <li>HDTV</li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            <div class="sect4">
+                                <ul class="none">
+                                    <li>
+                                        <i class="fa fa-utensils" style="font-size: 20px;"></i> Food and Drinks                                        <ul>
+                                            <li>Bed sheets</li>
+                                            <li>Blackout drapes/curtains</li>
+                                            <li>Climate Controlled air conditioning</li>
+                                            <li>Down duvet</li>
+                                            <li>Free cribs/infant beds</li>
+                                            <li>Premium bedding</li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="sect5">
+                                <ul class="none">
+                                    <li>
+                                        <i class="fa fa-wifi-3" style="font-size: 20px;"></i> Internet                                      <ul>
+                                            <li>
+                                                Free WIFI
+                                            </li>
+                                            <li>Free wired internet</li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sect6">
+                                <ul class="none">
+                                    <li>
+                                        <i class="fa fa-check" style="font-size: 20px;"></i> More
+                                        <ul>
+                                            <li>Daily housekeeping</li>
+                                            <li>Desk</li>
+                                            <li>Desk chair</li>
+                                            <li>Free newspaper</li>
+                                            <li>Laptop workspace</li>
+                                            <li>Soundproofed room</li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <hr>
+                    
+                    <style>
+                        .ratingcategories h2, .ratingcategories .ratingbarcontainer{
+                            width: 100%;
+                            
+                        }
+
+                        .ratingbarcontainer{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-gap: 18px;
+                        }
+
+                        .ratingbarcontainer div{
+                            width: 100%;
+                            
+
+                        }
+
+                        .ratingbarcontainer div progress{
+                            width: 100%;
+                            height: 8px;
+                            border-radius: 999px;                        }
+                        .ratingbarcontainer div progress::-webkit-progress-value{
+                            background-color: #003580 ;
+                        }
+                        .ratingbarcontainer div progress::-webkit-progress-bar{
+                            background-color: rgb(223, 216, 216);
+                            border-radius: 999px;
+                            border: 1px solid black;
+                            
+                        }
+                        .ratingbarcontainer div p{
+                            margin-bottom: -7px;
+                        }
+
+
+                        
+                    </style>
+                    <div class="ratingcategories">
+                        <h2>Rating Categories</h2>
+                        <div class="ratingbarcontainer">
+                            
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Staff</span><span style="display: inline-block; width: 49%; text-align: right;">8.2</span></p>
+                                <progress max="100" value="82" style="width: 100%; color: #262626"></progress>
+                            </div>
+                            
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Facilities</span><span style="display: inline-block; width: 49%; text-align: right;">7.6</span></p>
+
+                                <progress max="100" value="76" style="width: 100%; color: #262626"></progress>
+                            </div>
+
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Cleanliness</span><span style="display: inline-block; width: 49%; text-align: right;">7.9</span></p>
+
+                                <progress max="100" value="79" style="width: 100%; color: #262626"></progress>
+                            </div>
+
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Comfort</span><span style="display: inline-block; width: 49%; text-align: right;">8.0</span></p>
+
+                                <progress max="100" value="80" style="width: 100%; color: #262626"></progress>
+                            </div>
+
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Free WIFI</span><span style="display: inline-block; width: 49%; text-align: right;">7.3</span></p>
+
+                                <progress max="100" value="73" style="width: 100%; color: #262626"></progress>
+                            </div>
+
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Location</span><span style="display: inline-block; width: 49%; text-align: right;">8.0</span></p>
+
+                                <progress max="100" value="80" style="width: 100%; color: #262626"></progress>
+                            </div>
+
+                            <div>
+                                <p><span style="display: inline-block; width: 49%; text-align: left;">Value for money</span><span style="display: inline-block; width: 49%; text-align: right;">8.0</span></p>
+                                <progress max="100" value="80" style="width: 100%; color: #262626"></progress>
+                            </div> 
+
+                        </div>
+                    </div>
+                    <br>        
+                    <br>
+                    <hr>
+                    
+
+                    <div class="aroundhotelparentcontainer">
+                        <h2>Around hotel</h2>
+                        <div class="aroundhotelcontainer">
+                            <div class="park " style="position: relative;">
+                                
+                                <p class="p"><span>Restrauant</span></p>
+                                <img src="images/restrauant.jpeg" alt="">
+                            </div>
+                            <div class="wellness">
+                                <p class="p"><span>Wellness</span></p>
+                                <img src="images/wellness.jpeg" alt="">
+
+                            </div>
+                            <div class="smt">
+                                <p class="p"><span style="color: rgb(83, 80, 80)">Lounge bar</span></p>
+                                <img src="images/loungebar.jpg" alt="">
+
+                            </div>
+                            <div class="smt">
+                                <p class="p"><span style="color: rgb(83, 80, 80)">Lounge bar</span></p>
+                                <img src="images/loungebar.jpg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+
+                    <br>
+
+
+                    <style>
+                        .similarroomcontainer .similarroom{
+                            width: 100%;
+                            height: auto;
+                            /* border: 1px solid green; */
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: repeat(2, auto);
+                            grid-gap: 12px;
+                            
+                        }
+                        .similarroom *{
+                            /* border: 1px solid red; */
+                        }
+                        .similarroom .room{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                        }
+                        .room img{
+                            width: 100%;
+                            height: auto;
+                            border-radius: 12px;
+                        }
+                        .room p{
+                            position: absolute;
+                            font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+                            bottom: 0px;
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: white;
+                            line-height: 17px;
+                            letter-spacing: 2px;
+                            
+
+                        }
+                        /* .pricetag{
+                            visibility:hidden;
+                        } */
+
+                        .pricetag{
+                            visibility: visible;
+                            top: 0px;
+                            right: 0px;
+                            display: inline-block;
+                            background-color: rgb(105, 101, 101);
+                            height: 20px;
+                            width: 30%;
+                        
+                        }
+                    </style>
+
+                    <div class="similarroomcontainer">
+                        <h2>Similar Rooms</h2>
+                        <div class="similarroom">
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+                                <p>Apratment</p>
+                                <img src="images/room1.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Studio Room</p>
+                                <img src="images/room5.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Suites</p>
+                                <img src="images/room4.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Duvet Room</p>
+                                <img src="images/room3.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Double Room</p>
+                                <img src="images/room2.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Duvet Room</p>
+                                <img src="images/room3.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Duvet Room</p>
+                                <img src="images/room3.jpeg" alt="">
+                            </div>
+                            <div class="room">
+                                <p class="pricetag">Only $54</p>
+
+                                <p>Duvet Room</p>
+                                <img src="images/room3.jpeg" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    
+            </div>
+
+        </div>
+    </main>
+
+    <section class="footer" style=" margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;">
+        <div class="footer-content" style="margin-left: 20%; margin-top: 50px;">
+          <img class="footer-logo" src="../images/logo1.png" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+            explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+            possimus.
+          </p>
+  
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+            <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+            <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+            <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-content">
+          <h4>About Us</h4>
+          <li><a href="" style="text-decoration: none !important;">About Us</a></li>
+          <li><a href="" style="text-decoration: none !important;">career</a></li>
+          <li><a href="" style="text-decoration: none !important;">Blog</a></li>
+          <li><a href="" style="text-decoration: none !important;">Press Room</a></li>
+        </div>
+  
+        <div class="footer-content">
+          <h4>Resources</h4>
+          <li><a href=""  style="text-decoration: none !important;">Our Work</a></li>
+          <li><a href=""  style="text-decoration: none !important;">services</a></li>
+          <li><a href=""  style="text-decoration: none !important;">FAQ</a></li>
+        </div>
+  
+        <div class="footer-content" >
+          <h4>Contact Us</h4>
+          <li><a href=""  style="text-decoration: none !important;">About Us</a></li>
+          <li><a href=""  style="text-decoration: none !important;">Menu</a></li>
+          <li><a href=""  style="text-decoration: none !important;">Contact</a></li>
+        </div>
+      </section>
+
+
+</body>
+</html>

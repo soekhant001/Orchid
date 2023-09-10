@@ -1,68 +1,145 @@
-65<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Celebration</title>
 	
-	
 	<style type="text/css">
 		
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Padauk:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-
-      @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+	 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif,'Padauk', sans-serif;
+	text-decoration: none !important;
+	/* font-family: 'Roboto', sans-serif,'Padauk', sans-serif; */
 }
 .container {
-    padding: 20px;
-    background-color:#f2ecda;
+    /* padding: 20px; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 .container .img1{
-     padding-left: 200px;
-}
-.wedding h1{
-	color: red;
-	font-size: 50px;
-	padding-bottom: 10px;
+     /* padding-left: 20px; */
+	 width: 100%;
+
 
 }
-.wedding .p1{
+.container h1{
+	margin: 10px;
+	text-align: center;
+	  padding-bottom: 20px;
+}
+
+.wedding p{
 	font-size: 20px;
 	letter-spacing: 1px;
 	text-align: center;
 	padding-bottom: 10px;
 }
-.Button .form1{
-	background-color: pink;
-	margin: 10px;
-	padding-bottom: 20px;
-	padding-left: 30%;
+.kind_of_hall{
+   display: flex;
+   justify-content: space-evenly;
 }
-.Button .form1 .button1,.button2{
+
+.halls{
+	width: 80%;
+	height: 500px;
+	/* background-color: cyan; */
+	margin: 0 auto;
+}
+
+.wedd-container{
+	width: 80%;
+	margin:30px auto;
+	
+}
+
+.hall1,.hall2,.hall3{
+   width: 400px;
+   height:400px;
+   background-color: #f4f4f4;
+   border: 5px solid #f4f4f4;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+   padding: 10px;
+  margin: 10px 15px;
+}
+
+.halls img{
+	width: 350px;
+	
+   padding: 5px ;
+   height: auto;
+}
+.all_hall{
+	padding-left: 80%;
+}
+.hall1 .img1{
+			object-fit: cover;
+			transition: transform 0.8s;
+			
+		}
+		.hall2 .img2{
+			object-fit: cover;
+			transition: transform 0.8s;
+			/* height: 100%; */
+		}
+
+		.hall3 .img3{
+			object-fit: cover;
+			transition: transform 0.8s;
+			/* height: 100%; */
+		}
+
+		.hall1:hover .img1{
+			transform: scale(1.5);
+		}
+
+		.hall2:hover .img2{
+			transform: scale(1.5);
+		}
+		.hall3:hover .img3{
+			transform: scale(1.5);
+		}
+		.kind_of_hall .hall1-img,.hall2-img,.hall3-img{
+			overflow: hidden;
+		}
+		.kind_of_hall .hall-content{
+			margin-top: 10px;
+		}
+
+.Button .form1{
+	background-color: #f8f8f8;
+	margin: 20px;
+	padding-bottom: 20px;
+	padding-left: 40%;
+}
+.Button .form1 .button2,.button3{
 	padding: 20px 40px;
 	font-size: 20px;
 	margin-top: 20px;
 	border: none;
-	color: red;
-}
-.Button .form1 .button1:hover{
-border:groove medium red;
-background: red;
-color: whitesmoke;
+	background-color: rgba(210, 199, 250, 1);
+	
+	
 }
 .Button .form1 .button2:hover{
-border:groove medium red;
-background: red;
-color: whitesmoke;
+background-color: rgba(158, 131, 255, 0.968);
+color: black;
+border: none;
 }
+.Button .form1 .button3:hover{
+background-color: rgba(158, 131, 255, 0.968);
+color: black;
+border: none;
+}
+
+
+
+
 .venue{
 	padding: 10px 20px;
-	background-image: url("./img/wedding-banner.jpg");
+	background-image: url("./TPS_Images/wedding-banner.jpg");
 }
 .venue .second {
 	background-image:linear-gradient(115deg,
@@ -82,23 +159,50 @@ color: whitesmoke;
 .venue .button3{
 	padding: 10px 30px;
 	margin-left: 40%;
-	background: red;
-	color: white;
+	background-color: rgba(210, 199, 250, 1);
+	color: black;
 	border: none;
 }
 .venue .button3:hover{
-	background:#8A655D ;
+background-color: rgba(158, 131, 255, 0.968);
+
+	
+}
+
+.benefit,.benefit p,h3{
+	width: 80%;
+	padding: 20px;
+	margin:20px  auto;
+	
+}
+
+.benefit h2{
+	text-align: center;
+}
+.benefit img{
+	width: 500px;
+	padding: 20px;
+}
+
+.Culinary{
+	width: 80%;
+	margin: 20px auto 0;
+
 }
 .Culinary h1{
-	margin: 5px;
+	margin-bottom: 20px;
+	margin-left: 30px;
 }
 .Culinary img{
 	float: left;
-	padding: 20px;
+	margin-left: 35px;
+	padding-right: 30px;
 }
 .Culinary .list p{
 	padding: 10px;
 }
+
+
 .br{
 	clear: left;
 }
@@ -114,65 +218,367 @@ color: whitesmoke;
     width: 300px;
     height: 150px;
     padding: 10px;
-     margin-right: 20px;
-   /* display: grid;
-    place-items: center;*/    
-}
-.review .cards{
-	 display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 20px;
-}
-.card1,.card2,.card3{
-	background-color: #f4f4f4;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	border: 5px solid #f4f4f4;
-    width: 300px;
-    height: auto;
-    padding: 10px;
-    margin-top: 10px;
-	margin-left: 60px;
-}
-.cards .date{
-	padding-top:10px;
-	padding-bottom: 10px;
-}
-.cards h3,.sign{
-	padding-top: 10px;
-}
-.cards .sign{
-	font-weight: bolder;
+     margin-right: 20px;    
 }
 
+.head{
+	width: 500px;
+	padding: 15px;
+	/* border: 2px solid black; */
+
+	
+	margin: 150px auto 0;
+	/* display: inline-block; */
+}
+
+
+/* header start */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+
+
+
+
+img{
+    width: 100%; 
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: 0 auto; 
+    z-index: 10000;
+}
+
+.logo{
+    position: relative;
+    width: 130px;
+    top: 4px;
+    padding-bottom: 18px;
+    margin-left: 40px;
+
+}
+
+
+.nav-bar ul{
+    display: flex;
+    position: relative;
+}
+
+nav ul li a{
+    position: relative;
+   display: block;
+   font-weight: 500 ;
+   padding: 8px 20px;
+   transition: 0.2x;
+   border-radius: 30px;
+   color: #000;
+
+}
+
+nav ul li .sign:hover{
+    background-color: rgb(222, 226, 231);
+    border-radius: 30px;
+}
+
+
+
+.sign,.bookNow{
+    position: relative;
+    font-size: 17px;
+    margin-right: 80px;
+    
+}
+
+
+.bookNow{
+    background-color: rgba(210, 199, 250, 0.782);  
+}
+
+nav ul li .bookNow:hover{
+    background-color: rgba(158, 131, 255, 0.968);
+}
+
+.nav-list-container{
+    position: fixed;
+    top:75px;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+   
+}
+
+.nav-list-container .navList{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.navList
+{
+    
+    background-color: rgba(210, 199, 250, 0.782);
+    height: 48px;
+    border-radius: 8px ;
+}
+
+.navList li{
+   
+    text-align: center;
+    padding: 13px 0px 20px;
+}
+
+.navList li a{
+    position: relative;
+    color: #000;
+    font-size: 17px;
+}
+
+
+.navList li a:after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -10px;
+    transition: 0.5s;
+   
+}
+
+.navList li a:hover:after{
+    width: 100%;
+}
+
+
+.footer-logo{
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+section{
+    padding: 80px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 3.5rem;
+    position: relative;
+     left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color:  #f8f8f8;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 80px;
+    
+}
+
+.footer-content h4{
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+}
+
+.footer-content li a{
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400px;
+    transition: 0.6s;
+    
+
+}
+
+.footer-content li a:hover{
+    transform:  translateX(-6px);
+}
+
+.footer-content p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.icons a{
+    font-size: 20px;
+    color: #000;
+    margin-right: 17px;
+    transition: 0.5s;
+}
+
+.icons a:hover{
+    transform: translateY(-5px);
+    display: inline-block;
+}
+
+/* header end*/
 	</style>
 </head>
 <body>
-   <div class="container">
+	<header>
+		<div class="logo">
+		  <a href="./index.html"
+			><img src="./images/logo1.png" alt="hotelLogo"
+		  /></a>
+		</div>
+  
+		<nav class="nav-bar">
+		  <ul class="nav-list">
+			<li>
+			  <div class="sign">
+				<a href="">
+				  <i class="fa-solid fa-user"></i>
+				  Sign In/Up and Save 10%
+				</a>
+			  </div>
+			</li>
+  
+			<li>
+			  <div class="bookNow">
+				<a href="">Book Now</a>
+			  </div>
+			</li>
+		  </ul>
+		</nav>
+	  </header>
+  
+	  <div class="nav-list-container">
+		<ul class="navList">
+		  <div class="room">
+			<li><a href="./takethis/new.html">Room</a></li>
+		  </div>
+		  <div class="event">
+			<li><a href="./celebration1.html">Event</a></li>
+		  </div>
+		  <div class="restaurants">
+			<li><a href="./fooddrink.html">Restaurants</a></li>
+		  </div>
+		  <div class="s-f">
+			<li><a href="">Services & Facilities</a></li>
+		  </div>
+		  <div class="blog">
+			<li><a href="blog.html">Blog</a></li>
+		  </div>
+		  <div class="contact">
+			<li><a href="./contact.html">Contact</a></li>
+		  </div>
+		</ul>
+	  </div>
+
+	<div class="head" style="font-size: 20px; width: 700px;opacity: 0.8;"><h1>Hotel Wedding Introduction</h1></div>
    	<div class="box1">
+   		
    	<div class="img1">
-   		<img src="./img/image1.jpg" alt="image1.jpg">
+   		<img src="./TPS_Images/wedding_img.jpg" alt="wedding_img.jpg" style="width: 100%; height: 650px;">
    	</div>
    	<div class="wedding">
-   		<h1 class="h1">Weddings</h1>
-   		<p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   		
+   		<p style="margin-top: 20px;">An exciting new chapter of your life awaits you.</p>
+   		<p>Let ORCHID HOTEL help you turn the wedding of your dreams into a reality.</p>
+<br>
+    
+	<p class="p1" style="background-color: rgba(210, 199, 250, 0.782);">Your wedding day is when you look more beautiful than anyone in the world, so we have prepared everything for this special moment. We will suggest a variety of wedding styles ranging from classic and traditional themes to elegant and modern ideas with a sophisticated atmosphere. When you walk down the aisle in your beautiful white dress, your guests will be in awe alongside the luxurious and unique flower decorations, premium cuisine, and elaborate service. Kick off your festival and party at ORCHID HOTELS.</p>
    	</div>
-   	</div>
+</div>
+
+<div class="wedd-container">
+	<div class="halls">
+		<div class="hall_head" >
+
+ <h3 style="font-size: 40px; opacity: 0.8; margin: 0 0 20px -100px;">Wedding Hall</h3>
+		</div>
+
+<div class="kind_of_hall">
+
+		<div class="hall1">   	  	
+	   <div class="hall1-img"  >
+		 <img src="./TPS_Images/wedding_hall1.jpg" alt="wedding_hall1.jpg" class="img1">
+	 </div>
+
+	 <div class="hall-content">
+		 <p><b>Granded</b></p>
+		 <p>Capacity 20~50  Size 58~116㎡   Location  1F </p>
+	 </div>
+   
+	 </div>
+
+   <div class="hall2" >   	
+	   <div class="hall2-img" >
+		 <img src="./TPS_Images/wedding_hall2.jpg" alt="wedding_hall2.jpg" class="img2">
+	 </div>
+	   
+	 <div class="hall-content">
+		 <p><b>Emerald Room</b></p>
+	   <p>Capacity 50~150  Size 227.9㎡   Location  2F </p>
+	 </div>
+   
+   </div>
+
+   <div class="hall3">
+
+<div class="hall3-img">
+ <img src="./TPS_Images/wedding_hall3.jpg" alt="wedding_hall3.jpg" class="img3">
+</div>
+
+   <div class="hall-content">
+	 <p><b>Crystal</b></p>
+	   <p>Capacity 200~500  Size 1,1236㎡ Location Main </p>
+   </div>
+
+ </div>
+
+</div>
+</div>
+
+</div>
+   	<a href="#" class="all_hall">View All Wedding Halls</a>
    	<div class="Button">
    		<form class="form1">
-   		<b><input type="button" name="Find a Venue" id="button1" class="button1" value="Find a Venue"></b>
-   		<b><input type="button" name="Culinary Offerings" id="button2" class="button2" value="Culinary Offerings"></b>
+   		
+
+   		<b><input type="button" name="indoor" id="button2" class="button2" value="INDOOR"></b>
+
+   		<b><input type="button" name="Outdoor" id="button3" class="button3" value="OUTDOOR"></b>
+   		
    		</form>
    	</div>
    	<br><br>
-   	<!-- <div class="image2">
-   		<img src="./img/wedding-banner.jpg" alt="wedding-banner.jpg">
-   	</div> -->
+   
    	<div class="venue">
    		<div class="second">
    			
    		<h1>Find a venue</h1>
-   		<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   		<p class="p2">Choose from our fully-equipped venues, each appointed with high-speed internet access and seamless audio-visual equipment,ensuring truly memorable event for you and your guests.</p>
    	   
    	
    	    <div class="Button">
@@ -182,21 +588,50 @@ color: whitesmoke;
    		 </div>
    	    </div>
    	</div>
+
+<div class="benefit" style="margin-top: -80px;">
+   		<div class="head" style="width: 600px;">
+   			<h2 style="font-size: 30px;opacity: 0.8;">Benefits of Weddings at ORCHID HOTEL</h2>
+   		</div>
+   		<div class="benefit1">
+   		<img src="./TPS_Images/benefit_img1.jpg" alt="benefit_img1.jpg" style="float: left;">
+   		<h3>ORCHID Family Club</h3>
+   		<p>This special club was designed so that you can remember your special day. Look back on the joy you felt through our heartfelt services. Once you become a member of the LOTTE HOTEL Family Club, you will have access to assorted benefits and customer service that will remind you of your special day.</p>
+   		<br style="clear: both;">
+   	</div>
+
+   	<div class="benefit2">
+   		<img src="./TPS_Images/benefit_img2.jpg" alt="benefit_img2.jpg" style="float: left;">
+   		<h3>Room Package</h3>
+   		<p>1. A voucher for 1 free night will be provided with a wedding reservation (300 guests or more). (Only for the eve or day of wedding)<br>
+2. A wedding package rate will be offered to those who spend honeymoon in any LOTTE HOTEL. <br>
+* May vary by hotel.</p>
+   		<br style="clear: both;">
+   	</div>
+
+   <div class="benefit3">
+   		<img src="./TPS_Images/benefit_img3.jpg" alt="benefit_img3.jpg" style="float: left;">
+   		<h3>Limousine Service</h3>
+   		<p>An airport limousine service will be offered to the bride and groom (with 300 guests or more) on the way to their honeymoon. Experience VIP services that LOTTE HOTEL offers exclusively for our wedding customers.</p>
+   		<br style="clear: both;">
+   	</div>
+</div>
    	<div class="Culinary">
    		<h1>Culinary Offerings</h1>
-   		<img src="./img/cake.jpg" alt="cake.jpg" width="400px" height="300px">
+   		<img src="./TPS_Images/cake.jpg" alt="cake.jpg" width="400px" height="300px">
    		<div class="list">
-   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+   		<p>When it comes to food, you can look to our experienced Austrian-born chef to whip up a wonderful feast that will impress your guests.</p>
 
    		<h3>Signature Dishes</h3>
    		<br>
    			<ul type="square">
    				<li>Coffee Set: Croissants, Blueberry Danish, and Ice Cream</li><br>
-   				<li>Coffee Set: Croissants, Blueberry Danish, and Ice Cream</li>
+   				<li>Chinese Set: Eight Treasure Soup, Prawn in Lemon Grass Sauce, Mutton in Black Pepper Sauce</li>
    			</ul>
    		</div>
    		<br class="br">
    	</div>
+
    	<div class="menu">
    		<div class="menu1">
    			<p>Wedding Menu</p>
@@ -212,40 +647,7 @@ color: whitesmoke;
    			<a href="#">Download PDF</a>
    		    </div>
    		</div>
-   	</div>
-   	<div class="review">
-   		<div class="head">
-   			<h2>Guest Reviews</h2>
-   		</div>
-   	<div class="cards">
-   	<div class="card1">
-   		<div class="description">
-   			<h3>5 stars hotel & resort</h3>
-   			<p class="date">January 2019</p>
-   			<p class="word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   			<p class="sign">Wendy A</p>
-   		</div>
-   	</div>
+</div>
 
-   	<div class="card2">
-   		<div class="description">
-   			<h3>5 stars hotel & resort</h3>
-   			<p class="date">January 2019</p>
-   			<p class="word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   			<p class="sign">Wendy B</p>
-   		</div>
-   	</div>
-
-   	<div class="card3">
-   		<div class="description">
-   			<h3>5 stars hotel & resort</h3>
-   			<p class="date">January 2019</p>
-   			<p class="word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   			<p class="sign">Wendy C</p>
-   		</div>
-   	</div>
-   </div>
-   	</div>
-   </div>
 </body>
 </html>

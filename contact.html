@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<style type="text/css">
+		@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+		*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+
+h1,h2,h3{
+    font-size: 25px ;
+}
+
+
+
+img{
+    width: 100%; 
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: 0 auto; 
+    z-index: 10000;
+}
+
+.logo{
+    position: relative;
+    width: 130px;
+    top: 4px;
+    padding-bottom: 18px;
+    margin-left: 40px;
+
+}
+
+
+.nav-bar ul{
+    display: flex;
+    position: relative;
+}
+
+nav ul li a{
+    position: relative;
+   display: block;
+   font-weight: 500 ;
+   padding: 8px 20px;
+   transition: 0.2x;
+   border-radius: 30px;
+   color: #000;
+
+}
+
+nav ul li .sign:hover{
+    background-color: rgb(222, 226, 231);
+    border-radius: 30px;
+}
+
+
+
+.sign,.bookNow{
+    position: relative;
+    font-size: 17px;
+    margin-right: 80px;
+    
+}
+
+
+.bookNow{
+    background-color: rgba(210, 199, 250, 0.782);  
+}
+
+nav ul li .bookNow:hover{
+    background-color: rgba(158, 131, 255, 0.968);
+}
+
+.nav-list-container{
+    position: fixed;
+    top:75px;
+    width: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+   
+}
+
+.nav-list-container .navList{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.navList
+{
+    
+    background-color: rgba(210, 199, 250, 0.782);
+    height: 48px;
+    border-radius: 8px ;
+}
+
+.navList li{
+   
+    text-align: center;
+    padding: 13px 0px 20px;
+}
+
+.navList li a{
+    position: relative;
+    color: #000;
+    font-size: 17px;
+}
+
+
+.navList li a:after{
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 3px;
+    width: 0;
+    left: 0;
+    color: #000;
+    bottom: -10px;
+    transition: 0.5s;
+   
+}
+
+.navList li a:hover:after{
+    width: 100%;
+}
+
+
+.footer-logo{
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+section{
+    padding: 80px 13% 70px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 3.5rem;
+    position: relative;
+     left: 0;
+    right: 0;
+    bottom: 0; 
+    background-color:  #f8f8f8;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 80px;
+    
+}
+
+.footer-content h4{
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+}
+
+.footer-content li a{
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400px;
+    transition: 0.6s;
+    
+
+}
+
+.footer-content li a:hover{
+    transform:  translateX(-6px);
+}
+
+.footer-content p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.icons a{
+    font-size: 20px;
+    color: #000;
+    margin-right: 17px;
+    transition: 0.5s;
+}
+
+.icons a:hover{
+    transform: translateY(-5px);
+    display: inline-block;
+}
+#water{
+	padding-top: 150px;
+	width: 80%;
+	margin: 0 10%;
+}
+
+		*{
+			padding: 0;
+			margin: 0;
+
+		}
+		body{
+			background-color:whitesmoke;
+			color:black;
+			font-size:20px;
+		}
+       
+		#home{
+			width:50%;
+			/*height:100%;*/
+            /*margin-left: 10px: */
+			float:left;
+			background-color:whitesmoke;
+
+		}
+		#details{
+			width:50%;
+			float:right;
+			background-color:whitesmoke;
+		}
+		h1{
+			font-family: Time New Roman;
+			font-style: italic;
+			text-align: center;
+			background-color: whitesmoke;
+			padding:10px 0; 
+
+		}
+		
+		
+			
+		#width{
+			width:175px;
+			height: 20px;
+
+		}
+		
+		
+		
+		#submit{
+			background-color:rgba(210,199,250,0.782);
+			color:black;
+			width:200px;
+			height:40px;
+			border-radius:7px;
+			float: left;
+
+			
+
+
+		}
+		#submit:hover{
+			background-color:rgba(158,131,255,0.968);
+
+		}
+		p{
+			padding-top: 10px;
+		}
+		i{
+			padding-right: 5px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logo1.png" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="./takethis/new.html">Room</a></li>
+        </div>
+        <div class="event">
+          <li><a href="./celebration1.html">Event</a></li>
+        </div>
+        <div class="restaurants">
+          <li><a href="./fooddrink.html">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="./contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+    <div id="water">
+	<div id="body">
+		
+<div id="home">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.616402425077!2d3.5387784706136154!3d6.443276009856423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf7017fc02585%3A0xee39ec67f83aaae4!2sOrchid%20Hotels%20Limited!5e0!3m2!1sen!2smm!4v1693409099640!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	
+		
+
+	
+		    
+			<p> <i class="fa-solid fa-phone-volume"></i><b>Mobile </b>+63 917 778 5016<br><br>
+			<span> <i class="fa-solid fa-phone-volume"></i>Resort Telephone :+63 36 288 2222</span><br><br>
+			<span> <i class="fa-solid fa-phone-volume"></i>Boracy Reservations office : +63 917 778 1254</span><br><br>
+			<span> <i class="fa-solid fa-phone-volume"></i>Restaurant : +63 920 962 5999</span></p>
+	<br>
+			<p>One of your workspace experts will reach out to you based on your communication preferences.</p><br>
+	
+</div>
+	<div id="details">
+		<form >
+			<h3> Your Details</h3>
+			Title<br>
+			<select id="width">
+				<option></option>
+				<option>Mr.</option>
+				<option>Mrs.</option>
+				<option>Miss.</option>
+			</select><br><br>
+			Full Name <br>
+			<input id="name"type="text" name="name"><br><br>
+			Email <br>
+			<input id="email"type="email" name="email" ><br><br>
+			Contact Phone <br>
+			<input id="phone"type="text" name="phone"><br><br>
+			How can we help you?<br>
+			<textarea id="message"rows="3" cols="25"></textarea><br><br>
+			<h3>What option your're interested in?</h3><br>
+	
+	<input type="radio" name="room" id="room" class="ra" value="room"><label for="room">Cleaning bedroom</label>
+	<input type="radio" name="services" id="services" class="ra" value="services" ><label for="services">Good Services</label>
+	<input type="radio" name="relaxing" id="relaxing"  class="ra" value="relaxing"><label for="relaxing">Good relaxing</label>
+	<input type="radio" name="other" id="other"  class="ra"><label for="other" value
+	="other">other</label>
+
+			
+	
+		</form>
+
+		
+
+
+	
+	
+	
+		
+	
+	<p>Be clicking the button below you agree to out Teams of Services and have read understand our Privacy Policy.</p><br><br>
+	<input id="submit"type="submit" value="Send">
+
+
+	
+	</div>
+</div>
+</div>
+<section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+    </section>
+		
+
+		
+
+</body>
+</html>
