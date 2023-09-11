@@ -6,6 +6,7 @@
     box-sizing: border-box;
     text-decoration: none !important;
     list-style: none;
+    font-family: sans-serif;
 }
 
 
@@ -53,7 +54,7 @@ header{
 nav ul li a{
     position: relative;
    display: block;
-   font-weight: 500 ;
+   font-weight: 500px;
    padding: 8px 20px;
    transition: 0.2x;
    border-radius: 30px;

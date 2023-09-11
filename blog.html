@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <style>
+      *{
+        font-family: ;
+      }
       @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
       .news-container {
         display: flex;
@@ -26,16 +29,17 @@
       }
 
       .news-img {
-        padding: 50px;
+        padding: 50px 50px 0;
         width: 40%;
       }
       .news-img1 {
         width: 500px;
-        height: 50%;
-        padding-bottom: 25px;
+        height: 280px;
+        margin-bottom: 20px;
         border-radius: 15px;
       }
       .news-img2 {
+       padding-top: 40px;
         width: 500px;
         border-radius: 15px;
       }
@@ -126,118 +130,13 @@
       }
 
       /* gallery end */
-    </style>
-  </head>
-  <body>
-    <!-- head start -->
-    <header>
-      <div class="logo">
-        <a href="./index.html"
-          ><img src="./images/logo1.png" alt="hotelLogo"
-        /></a>
-      </div>
 
-      <nav class="nav-bar">
-        <ul class="nav-list">
-          <li>
-            <div class="sign">
-              <a href="">
-                <i class="fa-solid fa-user"></i>
-                Sign In/Up and Save 10%
-              </a>
-            </div>
-          </li>
+      /* surprise start */
 
-          <li>
-            <div class="bookNow">
-              <a href="">Book Now</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="nav-list-container">
-      <ul class="navList">
-        <div class="room">
-          <li><a href="./takethis/new.html">Room</a></li>
-        </div>
-        <div class="event">
-          <li><a href="./celebration1.html">Event</a></li>
-        </div>
-        <div class="restaurants">
-          <li><a href="fooddrink.html">Restaurants</a></li>
-        </div>
-        <div class="s-f">
-          <li><a href="">Services & Facilities</a></li>
-        </div>
-        <div class="blog">
-          <li><a href="">Blog</a></li>
-        </div>
-        <div class="contact">
-          <li><a href="./contact.html">Contact</a></li>
-        </div>
-      </ul>
-    </div>
-
-    <br /><br /><br /><br /><br /><br /><br />
-
-    <!-- head end -->
-
-    <!-- updates and news start -->
-    <section>
-      <h1 style="font-size: 35px; opacity: 0.7; margin-bottom: 25px">
-        Updates & News
-      </h1>
-      <div class="news-container">
-        <div class="news-left">
-          <div class="news-img">
-            <div class="news-img1">
-              <img src="./images/hotel_news1.jpg" alt="" />
-            </div>
-            <div class="news-img2">
-              <img src="./images/hotel_news1.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="news-right">
-          <div class="news-right-content"></div>
-        </div>
-      </div>
-    </section>
-    <!-- updates and news end -->
-
-    <!-- gallery start -->
-
-    <div class="gallery">
-      <div class="" style="width: 80%; margin: 0 auto 25px">
-        <h1 style="font-size: 35px; opacity: 0.7">Our Gallery</h1>
-      </div>
-      <div class="gallery-container">
-        <div class="g-1">
-          <img class="gal-1" src="./images/gal-1.webp" alt="gal-1" />
-        </div>
-        <div class="g-2">
-          <img class="gal-2" src="./images/gal2.webp" alt="gal-2" />
-        </div>
-        <div class="g-3">
-          <img class="gal-3" src="./images/gal-3.jpg" alt="gal-3" />
-        </div>
-        <div class="g-4">
-          <img class="gal-4" src="./images/gal-4.jpg" alt="gal-4" />
-        </div>
-        <div class="g-5">
-          <img class="gal-5" src="./images/gal-5.jpg" alt="gal-5" />
-        </div>
-        <div class="g-6">
-          <img class="gal-6" src="./images/gal-6.jpg" alt="gal-5" />
-        </div>
-      </div>
-    </div>
-
-    <!-- gallery end-->
-
-    <style>
+      .gallery{
+        margin-top: -50px;
+      }
+      
       .secret {
         height: 500px;
         width: 80%;
@@ -252,7 +151,7 @@
         width: 100%;
         margin-bottom: 10px;
         padding: 10px 0 0 0;
-        /* background-color: antiquewhite; */
+      
       }
       .secret-left {
         width: 40%;
@@ -262,7 +161,7 @@
 
       .fa-envelope {
         font-size: 60px;
-        /* margin-top: 15px; */
+      
       }
       .fa-envelope:hover {
         color: rgba(210, 199, 250, 1);
@@ -271,7 +170,7 @@
         margin-right: 50px;
         width: 40%;
         height: 500px;
-        /* background-color: aqua; */
+       
       }
 
       .secret-form {
@@ -281,6 +180,8 @@
         opacity: 0;
         transform: translateY(20px);
         transition: 0.8s;
+        margin-top: -15px;
+
       }
       .secret-form input {
         display: block;
@@ -295,7 +196,6 @@
       }
 
       .secret-name-message {
-        /* margin-top: -30px; */
         position: absolute;
         bottom: -160px;
 }
@@ -348,8 +248,7 @@
       }
 
       .dropdown {
-        /* border: 2px solid black; */
-        /* background-color: cyan; */
+    
         display: inline-block;
         position: relative;
         margin-left: 20px;
@@ -367,7 +266,6 @@
 
       .dropdown-toggle:focus + .secret-form {
         opacity: 1;
-        /* transform: translateY(500px); */
         transform: translateX(600px) translateY(-268px);
         pointer-events: all;
         height: 150px;
@@ -379,8 +277,164 @@
       .secret-img{
         height: 250px;
       }
+
+      /* surprise end */
+    </style>
+  </head>
+  <body>
+    <!-- head start -->
+
+    <header>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logo1.png" alt="hotelLogo"
+        /></a>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="bookNow" style="margin-bottom: 10px;">
+              <a href="" style="padding: 10px 15px;">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="">Room</a></li>
+        </div>
+        <div class="event">
+          <button class="event-btn" style="font-size: 17px;">Event</button>
+          <div class="event-menu">
+           
+            <a href="./celebration1.html" class="event-list">Celebration</a>
+            <a href="" class="event-list">Meeting</a>
+          </div>
+        </div>
+        <div class="restaurants">
+          <li>
+            <a href="fooddrink.html" style="margin-left: -150px">Restaurants</a>
+          </li>
+        </div>
+        <div class="s-f">
+          <li>
+            <a href="" style="margin-left: -50px">Package</a>
+          </li>
+        </div>
+        <div class="blog">
+          <li><a href="blog.html" style="margin-left: -25px">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="contact.html" style="margin-left: -25px">Contact</a></li>
+        </div>
+      </ul>
+    </div>
+   
+
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <!-- head end -->
+    <style>
+     
+
+      .news-right-content ul li p{
+        font-size: 20px; 
+        letter-spacing: 1.3px;
+        line-height: 30px;
+        padding: 20px ;
+      }
     </style>
 
+    <!-- updates and news start -->
+    <section>
+      <h1 style="font-size: 35px; opacity: 0.7; margin-bottom: 25px">
+        Updates & News
+      </h1>
+      <div class="news-container">
+        <div class="news-left">
+          <div class="news-img">
+            <div class="news-img1">
+              <img src="./images/roof.jpg" alt="" />
+            </div>
+            <div class="news-img2">
+              <img src="./images/holloween.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="news-right">
+          <div class="news-right-content">
+  <ul>
+    <li>  <p>
+      Every Friday to add entertainment plans on the roof of the hotel
+  You can make  rewarded with music and entertain that you can perform
+  It is a good place to surprise lovers. It can be used to use hotel staff if needed.
+  I surely say that that program going to be happy than you think.</p></li>
+    <li><p>
+      Specialty to guests on the next Halloween day
+      There are promotions.
+      There are also have game plan.
+      In the same way, other special days like valentine l, are also have fun promotions and services so warmly welcome from our 
+      ORCHID family.
+      </p></li>
+    <li><p>
+      Once a year, there are amazing promotions in the days of Hotel Anniversary.
+      These days,there are lucky dip program including the shopping ticket, refrigerator,
+      such as.....
+      </p></li>
+  </ul>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- updates and news end -->
+
+    <!-- gallery start -->
+
+    <div class="gallery">
+      <div class="" style="width: 80%; margin: 0 auto 25px">
+        <h1 style="font-size: 35px; opacity: 0.7">Our Gallery</h1>
+      </div>
+      <div class="gallery-container">
+        <div class="g-1">
+          <img class="gal-1" src="./images/gal-1.webp" alt="gal-1" />
+        </div>
+        <div class="g-2">
+          <img class="gal-2" src="./images/gal2.webp" alt="gal-2" />
+        </div>
+        <div class="g-3">
+          <img class="gal-3" src="./images/gal-3.jpg" alt="gal-3" />
+        </div>
+        <div class="g-4">
+          <img class="gal-4" src="./images/gal-4.jpg" alt="gal-4" />
+        </div>
+        <div class="g-5">
+          <img class="gal-5" src="./images/gal-5.jpg" alt="gal-5" />
+        </div>
+        <div class="g-6">
+          <img class="gal-6" src="./images/gal-6.jpg" alt="gal-5" />
+        </div>
+      </div>
+    </div>
+
+    <!-- gallery end-->
+
+    <br><br><br><br><br>
     <!-- surprise start -->
     <div class="secret">
       <div class="secret-left">
@@ -452,7 +506,7 @@
     </div>
 
     <!-- surprise end -->
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <!-- foot start -->
 
@@ -489,9 +543,8 @@
 
       <div class="footer-content">
         <h4>Contact Us</h4>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Menu</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href=""><i class="fa-solid fa-fw fa-phone"></i>+95 9984124321</a></li>
+        <li><a href=""><i class="fa-solid fa-fw fa-envelope"></i>blahblah@gmail.com</a></li>
       </div>
     </section>
 
