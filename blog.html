@@ -1,125 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <style>
-        
+      @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+      .news-container {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        height: 800px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(243, 243, 254, 0.7),
+            rgba(243, 243, 244, 0.5)
+          ),
+          url(./images/news2.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 90%;
+      }
+
+      .news-img {
+        padding: 50px;
+        width: 40%;
+      }
+      .news-img1 {
+        width: 500px;
+        height: 50%;
+        padding-bottom: 25px;
+        border-radius: 15px;
+      }
+      .news-img2 {
+        width: 500px;
+        border-radius: 15px;
+      }
+      .news-right {
+        width: 40%;
+        height: 79%;
+        background-color: rgba(210, 199, 250, 0.782);
+        margin-top: 50px;
+        border-radius: 15px;
+      }
+
+      .news-left {
+        animation-name: SlideInLeft;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+      }
+
+      .news-right {
+        animation-name: SlideInRight;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+      }
+
+      @keyframes SlideInLeft {
+        from {
+          transform: translateX(-100%);
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes SlideInRight {
+        from {
+          transform: translateX(100%);
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+      /* updates end */
+
+      /* gallery start */
+
+      .gallery-container {
+        width: 80%;
+        height: 500px;
+        background-color: antiquewhite;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow: scroll;
+        gap: 20px 0px;
+      }
+      .gal-1 {
+        width: 600px;
+        height: 400px;
+      }
+      .gal-2 {
+        float: right;
+        width: 580px;
+        height: 500px;
+      }
+      .gal-3 {
+        margin-top: -100px;
+        width: 600px;
+        height: 300px;
+      }
+      .gal-4 {
+        width: 600px;
+        height: 300px;
+      }
+      .gal-5 {
+        margin-top: -230px;
+        float: right;
+        width: 580px;
+        height: 520px;
+      }
+      .gal-6 {
+        margin-top: -10px;
+        width: 1180px;
+        height: 300px;
+      }
+
+      /* gallery end */
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- head start -->
     <header>
-        <div class="logo">
-          <a href="./index.html"
-            ><img src="./images/logo1.png" alt="hotelLogo"
-          /></a>
-        </div>
-  
-        <nav class="nav-bar">
-          <ul class="nav-list">
-            <li>
-              <div class="sign">
-                <a href="">
-                  <i class="fa-solid fa-user"></i>
-                  Sign In/Up and Save 10%
-                </a>
-              </div>
-            </li>
-  
-            <li>
-              <div class="bookNow">
-                <a href="">Book Now</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
-  
-      <div class="nav-list-container">
-        <ul class="navList">
-          <div class="room">
-            <li><a href="./takethis/new.html">Room</a></li>
-          </div>
-          <div class="event">
-            <li><a href="./celebration1.html">Event</a></li>
-          </div>
-          <div class="restaurants">
-            <li><a href="fooddrink.html">Restaurants</a></li>
-          </div>
-          <div class="s-f">
-            <li><a href="">Services & Facilities</a></li>
-          </div>
-          <div class="blog">
-            <li><a href="">Blog</a></li>
-          </div>
-          <div class="contact">
-            <li><a href="./contact.html">Contact</a></li>
-          </div>
-        </ul>
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logo1.png" alt="hotelLogo"
+        /></a>
       </div>
-      </header>
-      <!-- head end -->
 
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <div class="sign">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+                Sign In/Up and Save 10%
+              </a>
+            </div>
+          </li>
 
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <li>
+            <div class="bookNow">
+              <a href="">Book Now</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <div class="nav-list-container">
+      <ul class="navList">
+        <div class="room">
+          <li><a href="./takethis/new.html">Room</a></li>
+        </div>
+        <div class="event">
+          <li><a href="./celebration1.html">Event</a></li>
+        </div>
+        <div class="restaurants">
+          <li><a href="fooddrink.html">Restaurants</a></li>
+        </div>
+        <div class="s-f">
+          <li><a href="">Services & Facilities</a></li>
+        </div>
+        <div class="blog">
+          <li><a href="">Blog</a></li>
+        </div>
+        <div class="contact">
+          <li><a href="./contact.html">Contact</a></li>
+        </div>
+      </ul>
+    </div>
 
-      <!-- foot start -->
+    <br /><br /><br /><br /><br /><br /><br />
 
-      <section class="footer">
-        <div class="footer-content">
-          <img class="footer-logo" src="./images/logo1.png" alt="" />
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
-            explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
-            possimus.
-          </p>
-  
-          <div class="icons">
-            <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
-            <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
-            <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
-            <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+    <!-- head end -->
+
+    <!-- updates and news start -->
+    <section>
+      <h1 style="font-size: 35px; opacity: 0.7; margin-bottom: 25px">
+        Updates & News
+      </h1>
+      <div class="news-container">
+        <div class="news-left">
+          <div class="news-img">
+            <div class="news-img1">
+              <img src="./images/hotel_news1.jpg" alt="" />
+            </div>
+            <div class="news-img2">
+              <img src="./images/hotel_news1.jpg" alt="" />
+            </div>
           </div>
         </div>
-        <div class="footer-content">
-          <h4>About Us</h4>
-          <li><a href="">About Us</a></li>
-          <li><a href="">career</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Press Room</a></li>
+        <div class="news-right">
+          <div class="news-right-content"></div>
         </div>
-  
-        <div class="footer-content">
-          <h4>Resources</h4>
-          <li><a href="">Our Work</a></li>
-          <li><a href="">services</a></li>
-          <li><a href="">FAQ</a></li>
+      </div>
+    </section>
+    <!-- updates and news end -->
+
+    <!-- gallery start -->
+
+    <div class="gallery">
+      <div class="" style="width: 80%; margin: 0 auto 25px">
+        <h1 style="font-size: 35px; opacity: 0.7">Our Gallery</h1>
+      </div>
+      <div class="gallery-container">
+        <div class="g-1">
+          <img class="gal-1" src="./images/gal-1.webp" alt="gal-1" />
         </div>
-  
-        <div class="footer-content">
-          <h4>Contact Us</h4>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Menu</a></li>
-          <li><a href="">Contact</a></li>
+        <div class="g-2">
+          <img class="gal-2" src="./images/gal2.webp" alt="gal-2" />
         </div>
-      </section>
+        <div class="g-3">
+          <img class="gal-3" src="./images/gal-3.jpg" alt="gal-3" />
+        </div>
+        <div class="g-4">
+          <img class="gal-4" src="./images/gal-4.jpg" alt="gal-4" />
+        </div>
+        <div class="g-5">
+          <img class="gal-5" src="./images/gal-5.jpg" alt="gal-5" />
+        </div>
+        <div class="g-6">
+          <img class="gal-6" src="./images/gal-6.jpg" alt="gal-5" />
+        </div>
+      </div>
+    </div>
 
+    <!-- gallery end-->
 
-      <!-- foot end -->
+    <style>
+      .secret {
+        height: 500px;
+        width: 80%;
+        margin: 30px auto 0;
+        background-color: #f8f8f8;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
 
+      .secret-head {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 0 0 0;
+        /* background-color: antiquewhite; */
+      }
+      .secret-left {
+        width: 40%;
+        margin-left: 50px;
+       
+      }
 
+      .fa-envelope {
+        font-size: 60px;
+        /* margin-top: 15px; */
+      }
+      .fa-envelope:hover {
+        color: rgba(210, 199, 250, 1);
+      }
+      .secret-right {
+        margin-right: 50px;
+        width: 40%;
+        height: 500px;
+        /* background-color: aqua; */
+      }
 
+      .secret-form {
+       position: relative;
+        width: 100%;
+        height: 150px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.8s;
+      }
+      .secret-form input {
+        display: block;
+        width: 110%;
+        padding: 20px 20px 10px 20px;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        border: none;
+        border-bottom: 3px solid black;
+    background-color: rgba(210, 199, 250, 1);   
+      }
 
+      .secret-name-message {
+        /* margin-top: -30px; */
+        position: absolute;
+        bottom: -160px;
+}
+.secret-email-message {
+  position: absolute;
+        bottom: -216px;
+}
+.secret-ph-message {
 
+  position: absolute;
+        bottom: -272px;
 
+}
 
+      input:focus {
+        outline: none;
+        border-bottom: 3px solid black;
+      }
 
+      .secret-message-area {
+        /* margin-top: 20px; */
+        position: relative;
+        top: -150px;
+        width: 110%;
+        padding: 10px 20px 10px 20px;
+        font-size: 20px;
+        margin-top: -5px;
+    background-color: rgba(210, 199, 250, 0.5);
+    border: none;
+      }
 
+      .btn-cancel {
+        margin-left: 250px;
+      }
 
-    
-</body>
+      .but{
+        position: absolute;
+        bottom: -315px;
+        right: -47px;
+      }
+
+      .btn-submit,
+      .btn-cancel {
+        width: 100px;
+        height: 40px;
+        margin-top: 10px;
+        border: 2px solid rgba(210, 199, 250, 0.782);
+        background-color: rgba(210, 199, 250, 0.782);
+        border-radius: 6px;
+      }
+
+      .dropdown {
+        /* border: 2px solid black; */
+        /* background-color: cyan; */
+        display: inline-block;
+        position: relative;
+        margin-left: 20px;
+      }
+
+      .dropdown-toggle {
+        margin-top: 10px;
+        color: black;
+        border: none;
+        
+        font-size: 1rem;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .dropdown-toggle:focus + .secret-form {
+        opacity: 1;
+        /* transform: translateY(500px); */
+        transform: translateX(600px) translateY(-268px);
+        pointer-events: all;
+        height: 150px;
+      }
+
+      .secret-photo {
+        width: 110%;
+      }
+      .secret-img{
+        height: 250px;
+      }
+    </style>
+
+    <!-- surprise start -->
+    <div class="secret">
+      <div class="secret-left">
+        <div class="secret-head">
+          <h1 style="font-size: 35px; opacity: 0.7; margin-top: 20px">
+            Special For You
+          </h1>
+        </div>
+        <div class="secret-left-content">
+          <p style="line-height: 30px; font-size: 20px">
+            We have a surprise promotion for you this winter. If you are
+            interested , <b><i>click</i></b> on the envelope below. You will be
+            really surprised. <b>Are you interested?</b>
+          </p>
+          <h1 style="margin-top: 15px">Ready?</h1>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-toggle" style="display: inline-block; ">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+
+          <div class="secret-form">
+            <form>
+              <div class="secret-photo">
+                <img class="secret-img" src="./images/chaungthar.jpg" alt="" />
+              </div>
+           
+              <div class="secret-message-area">
+                <p style="font-size: 22px;">If you stay at the hotel 5 days or more, you will be allowed to go to the Chaungthar Beach with 70% discount.</p>
+              </div>
+
+              <input
+              class="secret-name-message"
+              type="text"
+              placeholder="Name"
+              required
+            />
+            <input
+              class="secret-email-message"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              class="secret-ph-message"
+              type="text"
+              placeholder="Phone-Number"
+              required
+            />
+
+              <div class="but">
+                <button class="btn-cancel">Cancel</button>
+              <button class="btn-submit">Submit</button>
+              </div>
+            </form>
+            
+          </div>
+          <div class="nice-day" style="margin-top: -100px;margin-left: 100px;">
+            <h1 style="font-size: 35px;">Have A Nice Day !</h1>
+          </div>
+        </div>
+         
+      </div>
+
+      <div class="secret-right">
+        <img src="./images/undraw_envelope_re_f5j4.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- surprise end -->
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!-- foot start -->
+
+    <section class="footer">
+      <div class="footer-content">
+        <img class="footer-logo" src="./images/logo1.png" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum ui
+          explicabo perspiciatis sint facere laudantium aspernatur ipsam vitae
+          possimus.
+        </p>
+
+        <div class="icons">
+          <a href="#"><i class="fa-brands fa-fw fa-facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-instagram icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-linkedin icon"></i></a>
+          <a href="#"><i class="fa-brands fa-fw fa-twitter icon"></i></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <h4>About Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">career</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press Room</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Resources</h4>
+        <li><a href="">Our Work</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">FAQ</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>Contact Us</h4>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+      </div>
+    </section>
+
+    <!-- foot end -->
+
+    <script>
+      ScrollReveal().reveal(".news-container", { duration: 2000 });
+    </script>
+  </body>
 </html>
